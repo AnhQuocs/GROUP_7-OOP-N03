@@ -9,5 +9,6 @@ class Number {
     n2.i = 5;
     n1.i = n2.i;
     n2.i = 10;//n1.i là giá trị thuộc tính 'i' của đối tượng 'n1' tại thời điểm cụ thể
+    int i;
     }
    }
