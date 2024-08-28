@@ -1,4 +1,5 @@
-public class Excercise_if_else {
+public class Excercise_if_else 
+{
     public static void main(String[] args) {
         int x = 10;
         int y = 20;
