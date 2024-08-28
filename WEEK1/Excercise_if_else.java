@@ -12,5 +12,10 @@ public class Excercise_if_else
         {
             System.out.println("x < y");
         }
+
+        else 
+        {
+            System.out.println("X > y");
+        }
     }
 }
