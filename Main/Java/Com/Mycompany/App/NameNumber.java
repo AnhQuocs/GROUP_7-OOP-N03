@@ -2,6 +2,6 @@ public class NameNumber
 {
     public static void main(String[] args) 
     {
-        System.out.println("NameNumber");
+        System.out.println("NameNumber OOP");
     }
 }
