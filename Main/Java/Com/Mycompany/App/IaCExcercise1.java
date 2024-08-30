@@ -1,17 +1,15 @@
 public class IaCExcercise1 
 {
-    static class Rock 
+    private String uninitializedString;
+
+    public void displayStringValue()
     {
-        Rock ()
-        {
-            System.out.print("Rock ");
-        }
+        System.out.println("Gia tri cua bien chua duoc khoi tao la: " + uninitializedString);
     }
     public static void main(String[] args) 
     {
-        for ( int i = 0 ; i < 10 ; i++)
-        {
-            new Rock();
-        }
+        IaCExcercise1 demo = new IaCExcercise1();
+        demo.displayStringValue();
+
     }
 }
