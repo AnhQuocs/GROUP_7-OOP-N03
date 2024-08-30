@@ -4,7 +4,7 @@ public class IaCExcercise1
     {
         Rock ()
         {
-            System.out.print("Rock ");
+            System.out.print(" Rock ");
         }
     }
     public static void main(String[] args) 
