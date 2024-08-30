@@ -1,15 +1,13 @@
 public class IaCExcercise1 
 {
-    private String uninitializedString;
-
-    public void displayStringValue()
+    String s1;
+    public void hien_thi_string()
     {
-        System.out.println("Gia tri cua bien chua duoc khoi tao la: " + uninitializedString);
+        System.out.println("s1 la " + s1);
     }
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
         IaCExcercise1 demo = new IaCExcercise1();
-        demo.displayStringValue();
-
+        demo.hien_thi_string();
     }
 }
+
