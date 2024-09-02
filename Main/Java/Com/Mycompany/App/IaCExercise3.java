@@ -6,7 +6,7 @@ public class IaCExercise3
     }
     public static void main(String[] args) 
     {
-        IaCExercise3 ojb = new IaCExercise3();
+        IaCExercise3 obj = new IaCExercise3();
     }
     
 }
