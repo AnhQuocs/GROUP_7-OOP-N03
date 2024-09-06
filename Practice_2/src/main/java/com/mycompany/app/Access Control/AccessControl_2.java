@@ -1,4 +1,3 @@
-
 import java.io.PrintStream;
 
 public class AccessControl_2 
