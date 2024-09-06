@@ -6,6 +6,7 @@ class Tank
     }
 }
 
+
 public class IaCExercise_12 
 {
     public static void main(String[] args) 
