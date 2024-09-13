@@ -1,5 +1,8 @@
+//package
 public class Radar 
 {
+    //dau vao thang radar
+    //dau ra radar
     public double calculateXn(int n) 
     {
         //discrete signal sample, phai dua vao trong discreteSignal, 
