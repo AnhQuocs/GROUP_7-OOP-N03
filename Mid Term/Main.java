@@ -1,3 +1,4 @@
+//package 
 public class Main {
     public static void main(String[] args) {
         DiscreteSignal discreteSignal = new DiscreteSignal();
