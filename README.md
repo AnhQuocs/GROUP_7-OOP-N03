@@ -4,14 +4,15 @@
 1. [Giới thiệu](#giới-thiệu)
 2. [Thành viên nhóm](#thành-viên-nhóm)
 3. [Mục tiêu cần đạt của dự án](#mục-tiêu-cần-đạt-của-dự-án)
-4. [Chức năng ứng dụng](#chức-năng-ứng-dụng)
+4. [UML Dự Án](#uml-dự-án)
+5. [Chức năng ứng dụng](#chức-năng-ứng-dụng)
    - [Quản lý sinh viên](#quản-lý-sinh-viên)
    - [Quản lý môn học](#quản-lý-môn-học)
    - [Đăng ký môn học](#đăng-ký-môn-học)
    - [Nhập điểm sinh viên](#nhập-điểm-sinh-viên)
-5. [Xử lý dữ liệu](#xử-lý-dữ-liệu)
-6. [Tùy chọn nâng cao](#tùy-chọn-nâng-cao)
-7. [Hướng dẫn cài đặt và chạy chương trình](#hướng-dẫn-cài-đặt-và-chạy-chương-trình)
+6. [Xử lý dữ liệu](#xử-lý-dữ-liệu)
+7. [Tùy chọn nâng cao](#tùy-chọn-nâng-cao)
+8. [Hướng dẫn cài đặt và chạy chương trình](#hướng-dẫn-cài-đặt-và-chạy-chương-trình)
 
 ---
 
@@ -45,6 +46,9 @@
    - Sinh viên có thể thêm các chức năng bổ sung để làm phong phú thêm ứng dụng.
 
 ---
+### **UML Dự Án**
+   - **UML Class Diagram**
+
 
 ### **Chức năng ứng dụng**
 
