@@ -1,4 +1,4 @@
-### **Ứng dụng quản lý sinh viên**
+### **Ứng dụng quản lý sinh viên khoa CNTT**
 
 ## **Mục lục**
 1. [Giới thiệu](#giới-thiệu)
@@ -59,16 +59,8 @@
 - **Liệt kê sinh viên**: Hiển thị danh sách sinh viên hiện có trong hệ thống.
 - **Lọc sinh viên theo điểm**: Lọc các sinh viên có điểm trung bình lớn hơn một giá trị n do người dùng chọn.
 
-#### **Quản lý môn học**
-- **Thêm môn học**: Người dùng có thể thêm thông tin về môn học (Mã môn học, Tên môn học, Số tín chỉ).
-- **Sửa môn học**: Cho phép chỉnh sửa thông tin của môn học.
-- **Xóa môn học**: Xóa môn học ra khỏi hệ thống.
-
-#### **Đăng ký môn học**
-- **Đăng ký môn học**: Sinh viên có thể chọn các môn học mà họ muốn đăng ký từ danh sách các môn học có sẵn.
-
 #### **Nhập điểm sinh viên**
-- **Nhập điểm**: Giảng viên hoặc người quản lý có thể nhập điểm cho các môn học mà sinh viên đã đăng ký.
+- **Nhập điểm**: Giảng viên hoặc người quản lý có thể nhập điểm cho các môn học mà sinh viên đã đăng ký. Điểm rèn luyện của học kỳ
 
 ---
 
@@ -80,7 +72,6 @@
 **Các lớp liên quan:**
 - **SinhVien**: Lớp đại diện cho một sinh viên với các thuộc tính như Mã sinh viên, Họ tên, Ngày sinh, và Điểm trung bình.
 - **MonHoc**: Lớp đại diện cho một môn học với các thuộc tính như Mã môn học, Tên môn học, và Số tín chỉ.
-- **DangKyHoc**: Lớp quản lý đăng ký môn học của sinh viên.
 
 ---
 
