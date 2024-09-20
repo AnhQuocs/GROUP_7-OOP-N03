@@ -48,7 +48,7 @@
 ---
 ### **UML Dự Án**
    - **UML Class Diagram**
-
+   - <img src="img/umlclassdiagram.png">
 
 ### **Chức năng ứng dụng**
 
