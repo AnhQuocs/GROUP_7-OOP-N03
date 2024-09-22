@@ -108,10 +108,10 @@
    - Cài đặt IDE hỗ trợ JavaFX như IntelliJ IDEA hoặc Eclipse.
    - Cài đặt thư viện JavaFX nếu chưa có sẵn.
 
-2. Clone repository từ GitHub:
+2. **Clone repository từ GitHub**:
    https://github.com/AnhQuocs/GROUP_7-OOP-N03.git
 
-2. **Chạy chương trình**:
+3. **Chạy chương trình**:
    - Import project vào IDE và cấu hình JavaFX.
    - Chạy file `Main.java` để khởi động ứng dụng quản lý sinh viên.
 
