@@ -6,10 +6,10 @@
 3. [Mục tiêu cần đạt của dự án](#mục-tiêu-cần-đạt-của-dự-án)
 4. [UML Dự Án](#uml-dự-án)
 5. [Chức năng ứng dụng](#chức-năng-ứng-dụng)
-   - [Quản lý sinh viên](#quản-lý-sinh-viên)
-   - [Quản lý môn học](#quản-lý-môn-học)
-   - [Đăng ký môn học](#đăng-ký-môn-học)
-   - [Nhập điểm sinh viên](#nhập-điểm-sinh-viên)
+   - [Nhập thông tin sinh viên](#nhập-thông-tin-sinh-viên)
+   - [Nhập điểm học phần](#nhập-điểm-học-phần)
+   - [Nhập điểm rèn luyện](#nhập-điểm-rèn-luyện)
+   - [Cập nhật lịch học/lịch thi](#cập-nhật-lịch-họclịch-thi)
 6. [Xử lý dữ liệu](#xử-lý-dữ-liệu)
 7. [Tùy chọn nâng cao](#tùy-chọn-nâng-cao)
 8. [Hướng dẫn cài đặt và chạy chương trình](#hướng-dẫn-cài-đặt-và-chạy-chương-trình)
@@ -17,13 +17,13 @@
 ---
 
 ### **Giới thiệu**
-Đây là một dự án xây dựng một ứng dụng quản lý sinh viên bằng ngôn ngữ Java với giao diện JavaFX. Ứng dụng sẽ hỗ trợ các chức năng cơ bản như quản lý sinh viên, môn học, đăng ký môn học, nhập điểm, và lưu trữ dữ liệu xuống file nhị phân.
+Đây là một dự án xây dựng một ứng dụng quản lý sinh viên bằng ngôn ngữ Java với giao diện JavaFX. Ứng dụng sẽ hỗ trợ các chức năng cơ bản như cập nhật thông tin sinh viên, lịch học/lịch thi, điểm học phần, điểm rèn luyện, và lưu trữ dữ liệu xuống file nhị phân.
 
 ---
 
 ### **Thành viên nhóm**
    - **Bùi Anh Quốc**: Phát triển ứng dụng toàn diện.
-   - **Trần Anh Tú**
+   - **Trần Anh Tú**: Đóng góp, kiểm thử ứng dụng.
 
 ---
 
@@ -33,10 +33,10 @@
    - Ứng dụng sử dụng giao diện đồ họa JavaFX.
   
 2. **Chức năng**:
-   - Quản lý sinh viên: Thêm, sửa, xóa sinh viên; liệt kê sinh viên và lọc theo điểm trung bình.
-   - Quản lý môn học: Thêm, sửa, xóa môn học.
-   - Đăng ký môn học cho sinh viên.
-   - Nhập điểm sinh viên.
+   - Nhập thông tin sinh viên: Thêm, sửa, xóa sinh viên; liệt kê sinh viên.
+   - Cập nhật lịch học/lịch thi.
+   - Nhập điểm rèn luyện và xếp loại cho sinh viên.
+   - Nhập điểm học phần.
 
 3. **Dữ liệu**: 
    - Dữ liệu cần được lưu trữ trong các file nhị phân.
@@ -48,21 +48,35 @@
 ---
 ### **UML Dự Án**
    - **UML Class Diagram**
-   - <img src="img/umlclassdiagram.png">
+    <img src="img/ClassDiagram.png">
+   - **UML Sequence Diagram ThongTinSinhVien**
+    <img src="img/ThongTinSinhVien.png">
+   - **UML Sequence Diagram LichHocLichThi**
+    <img src="img/LichHocLichThi.png">
+   - **UML Sequence Diagram DiemHocPhan**
+    <img src="img/DiemHocPhan.png">
+   - **UML Sequence Diagram DiemRenLuyen**
+    <img src="img/DiemRenLuyen.png">
 
 ---   
 
 ### **Chức năng ứng dụng**
 
-#### **Quản lý sinh viên**
+#### **Nhập thông tin sinh viên**
 - **Thêm sinh viên**: Người dùng có thể nhập thông tin sinh viên (Mã sinh viên, Họ tên, Ngày sinh, Điểm trung bình) và lưu vào hệ thống.
 - **Sửa thông tin sinh viên**: Cho phép chỉnh sửa thông tin của sinh viên đã tồn tại.
 - **Xóa sinh viên**: Xóa sinh viên ra khỏi danh sách.
 - **Liệt kê sinh viên**: Hiển thị danh sách sinh viên hiện có trong hệ thống.
-- **Lọc sinh viên theo điểm**: Lọc các sinh viên có điểm trung bình lớn hơn một giá trị n do người dùng chọn.
 
-#### **Nhập điểm sinh viên**
-- **Nhập điểm**: Giảng viên hoặc người quản lý có thể nhập điểm cho các môn học mà sinh viên đã đăng ký. Điểm rèn luyện của học kỳ
+
+#### **Nhập điểm học phần**
+- **Nhập điểm**: Giảng viên hoặc người quản lý có thể nhập điểm cho các môn học mà sinh viên đã đăng ký.
+
+#### **Nhập điểm rèn luyện**
+- **Nhập điểm**: Giảng viên hoặc người quản lý có thể nhập điểm rèn luyện cho học học kỳ đó mà sinh viên đã đăng ký.
+
+#### **Cập nhật lịch học/lịch thi**
+- **Cập nhật**: Giảng viên hoặc người quản lý có thể Cập nhật lịch học/lịch thi cho học học kỳ mà sinh viên đã đăng ký.
 
 ---
 
@@ -72,8 +86,8 @@
 - Khi làm việc với dữ liệu trong bộ nhớ, dữ liệu cần được lưu trữ trong các cấu trúc dữ liệu như `ArrayList`, `LinkedList`, hoặc `Map`.
 
 **Các lớp liên quan:**
-- **SinhVien**: Lớp đại diện cho một sinh viên với các thuộc tính như Mã sinh viên, Họ tên, Ngày sinh, và Điểm trung bình.
-- **MonHoc**: Lớp đại diện cho một môn học với các thuộc tính như Mã môn học, Tên môn học, và Số tín chỉ.
+- **GiaoDienNguoiDung**: Lớp đại diện cho người dùng có thể quay trở lại màn hình chính sau khi đã hoàn tất một thao táo nào đó.
+- **HocPhan**: Lớp đại diện cho một học phần với các thuộc tính như Mã học phần, Tên học phần, và Số tín chỉ.
 
 ---
 
@@ -93,6 +107,9 @@
    - Cài đặt JDK (Java Development Kit).
    - Cài đặt IDE hỗ trợ JavaFX như IntelliJ IDEA hoặc Eclipse.
    - Cài đặt thư viện JavaFX nếu chưa có sẵn.
+
+2. Clone repository từ GitHub:
+   https://github.com/AnhQuocs/GROUP_7-OOP-N03.git
 
 2. **Chạy chương trình**:
    - Import project vào IDE và cấu hình JavaFX.
