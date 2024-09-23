@@ -10,6 +10,7 @@
    - [Nhập điểm học phần](#nhập-điểm-học-phần)
    - [Nhập điểm rèn luyện](#nhập-điểm-rèn-luyện)
    - [Cập nhật lịch học/lịch thi](#cập-nhật-lịch-họclịch-thi)
+   - [Tra cứu điểm học phần/điểm rèn luyện](#tra-cứu-điểm-học-phầnđiểm-rèn-luyện)
 6. [Xử lý dữ liệu](#xử-lý-dữ-liệu)
 7. [Tùy chọn nâng cao](#tùy-chọn-nâng-cao)
 8. [Hướng dẫn cài đặt và chạy chương trình](#hướng-dẫn-cài-đặt-và-chạy-chương-trình)
@@ -17,7 +18,7 @@
 ---
 
 ### **Giới thiệu**
-Đây là một dự án xây dựng một ứng dụng quản lý sinh viên bằng ngôn ngữ Java với giao diện JavaFX. Ứng dụng sẽ hỗ trợ các chức năng cơ bản như cập nhật thông tin sinh viên, lịch học/lịch thi, điểm học phần, điểm rèn luyện, và lưu trữ dữ liệu xuống file nhị phân.
+Đây là một dự án xây dựng một ứng dụng quản lý sinh viên bằng ngôn ngữ Java với giao diện JavaFX. Ứng dụng sẽ hỗ trợ các chức năng cơ bản như cập nhật thông tin sinh viên, lịch học/lịch thi, điểm học phần, điểm rèn luyện, tra cứu điểm điểm học phần/điểm rèn luyện và lưu trữ dữ liệu xuống file nhị phân.
 
 ---
 
@@ -36,7 +37,8 @@
    - Nhập thông tin sinh viên: Thêm, sửa, xóa sinh viên; liệt kê sinh viên.
    - Cập nhật lịch học/lịch thi.
    - Nhập điểm rèn luyện và xếp loại cho sinh viên.
-   - Nhập điểm học phần.
+   - Nhập điểm học phần và xét học lực cho Sinh Viên.
+   - Tra cứu điểm học phần, điểm rèn luyện.
 
 3. **Dữ liệu**: 
    - Dữ liệu cần được lưu trữ trong các file nhị phân.
@@ -57,7 +59,8 @@
     <img src="img/DiemHocPhan.png">
    - **UML Sequence Diagram DiemRenLuyen**
     <img src="img/DiemRenLuyen.png">
-
+   - **UML Sequence Diagram Tra cứu điểm**
+    <img src="img/TraCuuDiem.png">
 ---   
 
 ### **Chức năng ứng dụng**
@@ -77,6 +80,9 @@
 
 #### **Cập nhật lịch học/lịch thi**
 - **Cập nhật**: Giảng viên hoặc người quản lý có thể Cập nhật lịch học/lịch thi cho học học kỳ mà sinh viên đã đăng ký.
+
+#### **Tra cứu điểm học phần/điểm rèn luyện**
+- **Tra cứu**: Sinh viên hoặc người dùng có thể tra cứu điểm học phần cũng như điểm rèn luyện cho học kỳ mà sinh viên đã đăng ký.
 
 ---
 
