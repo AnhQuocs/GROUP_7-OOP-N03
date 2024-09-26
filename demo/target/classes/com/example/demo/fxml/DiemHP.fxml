@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.DiemHPController">
+   <children>
+      <Separator layoutY="214.0" prefHeight="14.0" prefWidth="1100.0" />
+      <GridPane layoutX="-5.0" layoutY="-4.0" prefHeight="209.0" prefWidth="1108.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.3999908447266" minWidth="10.0" prefWidth="278.3999908447266" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.80002441406248" minWidth="10.0" prefWidth="156.0000091552734" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="157.5999755859375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.80002441406248" minWidth="10.0" prefWidth="184.80002441406248" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.20001220703136" minWidth="10.0" prefWidth="198.5999755859376" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="73.40001220703125" minHeight="10.0" prefHeight="73.40001220703125" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="49.799993896484374" minHeight="10.0" prefHeight="41.600012207031256" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="67.39999999999999" minHeight="10.0" prefHeight="50.399987792968744" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="67.39999999999999" minHeight="10.0" prefHeight="50.399987792968744" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="54.0" prefWidth="165.0" text="Điểm Học Phần" GridPane.columnIndex="2" GridPane.halignment="LEFT">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Chọn học kỳ" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <SplitMenuButton fx:id="chonHocKy" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <items>
+                <MenuItem mnemonicParsing="false" text="HK1 2024-2025" />
+              </items>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </SplitMenuButton>
+            <Label text="Chọn môn học" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <SplitMenuButton fx:id="chonMonHoc" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="187.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Lập trình hướng đối tượng" />
+                  <MenuItem mnemonicParsing="false" text="Cơ sở dữ liệu" />
+                  <MenuItem mnemonicParsing="false" text="Xây dựng ứng dụng web" />
+                  <MenuItem mnemonicParsing="false" text="Cấu trúc dữ liệu và thuật toán" />
+                  <MenuItem mnemonicParsing="false" text="Tư tưởng Hồ Chí Minh" />
+               </items>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </SplitMenuButton>
+            <Label text="Mã sinh viên" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="maSinhVien" prefHeight="26.0" prefWidth="110.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="search" mnemonicParsing="false" onAction="#onSearch" prefHeight="30.0" prefWidth="83.0" text="Đồng ý" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" text="&lt; Quay lại" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="10.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <HBox layoutX="-2.0" layoutY="361.0" prefHeight="241.0" prefWidth="1110.0">
+         <children>
+            <GridPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="218.0" prefWidth="1108.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.60000610351562" minWidth="10.0" prefWidth="151.19998168945312" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.2000244140625" minWidth="10.0" prefWidth="145.6000183105469" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.00001220703126" minWidth="10.0" prefWidth="116.79997558593749" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.59997558593756" minWidth="10.0" prefWidth="162.7999877929688" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.79998779296875" minWidth="10.0" prefWidth="145.20001220703125" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.99993896484375" minWidth="10.0" prefWidth="179.59995117187498" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="213.59999389648436" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="190.19998779296878" minHeight="10.0" prefHeight="51.80003662109376" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="163.99997558593748" minHeight="10.0" prefHeight="50.99998779296877" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="88.79996337890626" minHeight="10.0" prefHeight="67.80001220703124" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="22.0" prefWidth="28.0" text="CC1" textAlignment="CENTER" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="cc1Field" maxWidth="-Infinity" prefHeight="26.0" prefWidth="95.0" GridPane.columnIndex="1" />
+                  <Label prefHeight="22.0" prefWidth="28.0" text="CC2" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="cc2Field" maxWidth="-Infinity" prefHeight="26.0" prefWidth="95.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label prefHeight="22.0" prefWidth="42.0" text="Hệ số" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="42.0" text="Hệ số" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <SplitMenuButton fx:id="heSoCC1Split" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="24.0" prefWidth="74.0" GridPane.columnIndex="2">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="5%" />
+                        <MenuItem mnemonicParsing="false" text="10%" />
+                        <MenuItem mnemonicParsing="false" text="20%" />
+                        <MenuItem mnemonicParsing="false" text="30%" />
+                        <MenuItem mnemonicParsing="false" text="50%" />
+                        <MenuItem mnemonicParsing="false" text="60%" />
+                     </items>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="2.0" />
+                     </GridPane.margin>
+                  </SplitMenuButton>
+                  <SplitMenuButton fx:id="heSoCC2Split" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="24.0" prefWidth="74.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="5%" />
+                        <MenuItem mnemonicParsing="false" text="10%" />
+                        <MenuItem mnemonicParsing="false" text="20%" />
+                        <MenuItem mnemonicParsing="false" text="30%" />
+                        <MenuItem mnemonicParsing="false" text="50%" />
+                        <MenuItem mnemonicParsing="false" text="60%" />
+                     </items>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="2.0" />
+                     </GridPane.margin>
+                  </SplitMenuButton>
+                  <Label prefHeight="22.0" prefWidth="56.0" text="Giữa kỳ" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="56.0" text="Cuối kỳ" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="giuaKyField" maxWidth="-Infinity" prefHeight="26.0" prefWidth="95.0" GridPane.columnIndex="4" />
+                  <TextField fx:id="cuoiKyField" maxWidth="-Infinity" prefHeight="26.0" prefWidth="95.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Label prefHeight="22.0" prefWidth="42.0" text="Hệ số" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="42.0" text="Hệ số" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <SplitMenuButton fx:id="heSoGiuaKySplit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="24.0" prefWidth="74.0" GridPane.columnIndex="5">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="5%" />
+                        <MenuItem mnemonicParsing="false" text="10%" />
+                        <MenuItem mnemonicParsing="false" text="20%" />
+                        <MenuItem mnemonicParsing="false" text="30%" />
+                        <MenuItem mnemonicParsing="false" text="50%" />
+                        <MenuItem mnemonicParsing="false" text="60%" />
+                     </items>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="2.0" />
+                     </GridPane.margin>
+                  </SplitMenuButton>
+                  <SplitMenuButton fx:id="heSoCuoiKySplit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="24.0" prefWidth="74.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="5%" />
+                        <MenuItem mnemonicParsing="false" text="10%" />
+                        <MenuItem mnemonicParsing="false" text="20%" />
+                        <MenuItem mnemonicParsing="false" text="30%" />
+                        <MenuItem mnemonicParsing="false" text="50%" />
+                        <MenuItem mnemonicParsing="false" text="60%" />
+                     </items>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="2.0" />
+                     </GridPane.margin>
+                  </SplitMenuButton>
+                  <Label prefHeight="22.0" prefWidth="87.0" text="Điểm bài tập" textAlignment="CENTER" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="baiTapField" maxWidth="-Infinity" prefHeight="26.0" prefWidth="95.0" promptText="Nếu có" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label prefHeight="22.0" prefWidth="42.0" text="Hệ số" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <SplitMenuButton fx:id="heSoBaiTapSplit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="24.0" prefWidth="74.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="5%" />
+                        <MenuItem mnemonicParsing="false" text="10%" />
+                        <MenuItem mnemonicParsing="false" text="20%" />
+                        <MenuItem mnemonicParsing="false" text="30%" />
+                        <MenuItem mnemonicParsing="false" text="50%" />
+                        <MenuItem mnemonicParsing="false" text="60%" />
+                     </items>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="2.0" />
+                     </GridPane.margin>
+                  </SplitMenuButton>
+                  <Label prefHeight="22.0" prefWidth="106.0" text="Điểm thực hành" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="thucHanhField" maxWidth="-Infinity" prefHeight="26.0" prefWidth="95.0" promptText="Nếu có" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="2.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <SplitMenuButton fx:id="heSoThucHanhSplit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="24.0" prefWidth="74.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="5%" />
+                        <MenuItem mnemonicParsing="false" text="10%" />
+                        <MenuItem mnemonicParsing="false" text="20%" />
+                        <MenuItem mnemonicParsing="false" text="30%" />
+                        <MenuItem mnemonicParsing="false" text="50%" />
+                        <MenuItem mnemonicParsing="false" text="60%" />
+                     </items>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="2.0" />
+                     </GridPane.margin>
+                  </SplitMenuButton>
+                  <Label prefHeight="22.0" prefWidth="42.0" text="Hệ số" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="luuDiem" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onLuuDiem" prefHeight="28.0" prefWidth="66.0" text="Lưu" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="2.0" top="15.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox layoutY="253.0" prefHeight="109.0" prefWidth="1100.0">
+         <children>
+            <TableView fx:id="tableView" prefHeight="125.0" prefWidth="1100.0">
+               <columns>
+                  <TableColumn fx:id="hoVaDemColumn" prefWidth="100.0" text="Họ và Đệm" />
+                  <TableColumn fx:id="tenColumn" prefWidth="70.0" text="Tên" />
+                  <TableColumn fx:id="maSinhVienColumn" prefWidth="85.0" text="Mã Sinh Viên" />
+                  <TableColumn fx:id="gTinhColumn" prefWidth="70.0" text="Giới Tính" />
+                  <TableColumn fx:id="dateSinhColumn" prefWidth="85.0" text="Ngày Sinh" />
+                  <TableColumn fx:id="noiSinhColumn" prefWidth="85.0" text="Nơi Sinh" />
+                  <TableColumn fx:id="emailColumn" prefWidth="190.0" text="Email" />
+                  <TableColumn fx:id="soDienThoaiColumn" prefWidth="85.0" text="Số Điện Thoại" />
+                  <TableColumn fx:id="khoaDTColumn" prefWidth="90.0" text="Khóa Đào Tạo" />
+                  <TableColumn fx:id="nganhHocColumn" prefWidth="150.0" text="Ngành" />
+                  <TableColumn fx:id="lopHocColumn" prefWidth="87.0" text="Lớp" />
+               </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox layoutX="1.0" layoutY="224.0" prefHeight="28.0" prefWidth="1100.0">
+         <children>
+            <GridPane prefHeight="28.0" prefWidth="1100.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Thông Tin Sinh Viên" GridPane.halignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</Pane>

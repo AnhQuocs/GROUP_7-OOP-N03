@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.DanhSachController">
+   <children>
+      <HBox prefHeight="71.0" prefWidth="1100.0">
+         <children>
+            <GridPane prefHeight="71.0" prefWidth="1102.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="Danh Sách Sinh Viên" GridPane.halignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="themSinhVienButton" mnemonicParsing="false" text="+ Thêm Sinh Viên" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="100.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Label style="-fx-font-style: italic; -fx-opacity: 0.7;" text="(Click vào mỗi sinh viên để sửa/ xóa thông tin sinh viên)" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Button fx:id="suaXoaButton" disable="true" mnemonicParsing="false" onAction="#onSuaXoaButtonClick" text="Sửa/ Xóa" GridPane.halignment="RIGHT">
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="quayLaiDS" onAction="#onQuayLaiDS" mnemonicParsing="false" text="&lt; Quay lại" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <TableView fx:id="tableView" layoutY="72.0" prefHeight="430.0" prefWidth="1100.0">
+        <columns>
+            <TableColumn fx:id="hoVaDemColumn" prefWidth="100.0" text="Họ và Đệm" />
+            <TableColumn fx:id="tenColumn" prefWidth="70.0" text="Tên" />
+            <TableColumn fx:id="maSinhVienColumn" prefWidth="85.0" text="Mã Sinh Viên" />
+            <TableColumn fx:id="gTinhColumn" prefWidth="70.0" text="Giới Tính" />
+            <TableColumn fx:id="dateSinhColumn" prefWidth="85.0" text="Ngày Sinh" />
+            <TableColumn fx:id="noiSinhColumn" prefWidth="85.0" text="Nơi Sinh" />
+            <TableColumn fx:id="emailColumn" prefWidth="190.0" text="Email" />
+            <TableColumn fx:id="soDienThoaiColumn" prefWidth="85.0" text="Số Điện Thoại" />
+            <TableColumn fx:id="khoaDTColumn" prefWidth="90.0" text="Khóa Đào Tạo" />
+            <TableColumn fx:id="nganhHocColumn" prefWidth="150.0" text="Ngành" />
+            <TableColumn fx:id="lopHocColumn" prefWidth="87.0" text="Lớp" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
