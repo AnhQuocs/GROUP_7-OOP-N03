@@ -14,6 +14,7 @@
 6. [Xử lý dữ liệu](#xử-lý-dữ-liệu)
 7. [Tùy chọn nâng cao](#tùy-chọn-nâng-cao)
 8. [Hướng dẫn cài đặt và chạy chương trình](#hướng-dẫn-cài-đặt-và-chạy-chương-trình)
+9. [Màn hình ứng dụng](#màn-hình-ứng-dụng)
 
 ---
 
@@ -121,4 +122,13 @@
    - Import project vào IDE và cấu hình JavaFX.
    - Chạy file `Main.java` để khởi động ứng dụng quản lý sinh viên.
 
+---
+
+### **Màn hình ứng dụng**
+
+- **Màn hình đăng nhập**:
+<img src="img/Dangnhap.png">
+
+- **Màn hình chính**:
+<img src="img/Giaodienungdung.jpg">
 ---
