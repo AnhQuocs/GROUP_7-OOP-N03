@@ -52,7 +52,7 @@
                         <Insets left="50.0" />
                      </GridPane.margin>
                   </ComboBox>
-                  <Button fx:id="LichHocThi" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Lịch học / Lịch thi" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="LichHocThi" onAction="#onLichHocThi" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Lịch học / Lịch thi" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </children>
