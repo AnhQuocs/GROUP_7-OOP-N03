@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectfx.controller.DSLichThiController">
    <children>
-      <HBox prefHeight="89.0" prefWidth="780.0">
+      <HBox prefHeight="89.0" prefWidth="1000.0">
          <children>
-            <GridPane prefHeight="86.0" prefWidth="903.0">
+            <GridPane prefHeight="90.0" prefWidth="1002.0">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                </columnConstraints>
@@ -30,7 +30,7 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" text="Thêm Lịch" GridPane.halignment="RIGHT">
+                  <Button fx:id="themLichThiButton" mnemonicParsing="false" text="+ Thêm Lịch" GridPane.halignment="RIGHT">
                      <GridPane.margin>
                         <Insets right="120.0" />
                      </GridPane.margin>
@@ -38,7 +38,7 @@
                         <Font size="13.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" text="Sửa/Xóa" GridPane.halignment="RIGHT">
+                  <Button fx:id="suaXoaLichButton" mnemonicParsing="false" text="Sửa/Xóa" GridPane.halignment="RIGHT">
                      <GridPane.margin>
                         <Insets right="20.0" />
                      </GridPane.margin>
@@ -52,7 +52,7 @@
                         <Insets bottom="3.0" right="20.0" />
                      </GridPane.margin>
                   </Label>
-                  <Button mnemonicParsing="false" text="&lt; Quay lại" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                  <Button fx:id="quayLaiButton" mnemonicParsing="false" onAction="#onQuayLai" text="&lt; Quay lại" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets left="10.0" top="10.0" />
                      </GridPane.margin>
@@ -64,15 +64,18 @@
             </GridPane>
          </children>
       </HBox>
-      <HBox layoutY="88.0" prefHeight="366.0" prefWidth="780.0">
+      <HBox layoutY="88.0" prefHeight="366.0" prefWidth="1000.0">
          <children>
-            <TableView prefHeight="372.0" prefWidth="780.0">
+            <TableView fx:id="tableView" prefHeight="366.0" prefWidth="1001.0">
                <columns>
-                  <TableColumn prefWidth="180.0" text="Môn Thi" />
-                  <TableColumn prefWidth="150.0" text="Ngày Thi" />
-                  <TableColumn prefWidth="150.0" text="Ca Thi" />
-                  <TableColumn prefWidth="150.0" text="Phòng Thi" />
-                  <TableColumn prefWidth="150.0" text="Thời Gian Thi" />
+                  <TableColumn fx:id="hocKyColumn" prefWidth="110.0" text="Học kỳ" />
+                  <TableColumn fx:id="monThiColumn" prefWidth="180.0" text="Môn thi" />
+                  <TableColumn fx:id="ngayThiColumn" prefWidth="110.0" text="Ngày Thi" />
+                  <TableColumn fx:id="caThiColumn" prefWidth="120.0" text="Ca thi" />
+                  <TableColumn fx:id="phongThiColumn" prefWidth="140.0" text="Phòng thi" />
+                  <TableColumn fx:id="thoiGianThiColumn" prefWidth="120.0" text="Thời gian thi" />
+                  <TableColumn fx:id="kyThiColumn" text="Kỳ thi" />
+                  <TableColumn fx:id="hinhThucColumn" prefWidth="160.0" text="Hình thức" />
                </columns>
             </TableView>
          </children>

@@ -20,9 +20,9 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 
-import com.example.projectfx.method.SinhVien;
+import com.example.projectfx.model.SinhVien;
 
-public class InfoController {
+public class InforController {
 
     // Gán các thành phần từ FXML
     @FXML
@@ -196,7 +196,7 @@ public class InfoController {
             return;
         }
 
-        SinhVien sinh_vien = new SinhVien();
+        SinhVien sinh_vien = new SinhVien(hoVaDem, ten, maSinhVien, email, soDienThoai, noiSinh, dateSinh, gTinh, khoaDT, lopHoc, nganhHoc);
         sinh_vien.setHoVaDem(hoVaDem);
         sinh_vien.setTen(ten);
         sinh_vien.setMaSinhVien(maSinhVien);

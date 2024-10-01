@@ -1,0 +1,17 @@
+.body {
+    -fx-background-color: #202020;
+}
+
+.text-color {
+    -fx-text-fill: #fff;
+}
+
+.back-ground-pka {
+    -fx-background-image: url('/com/example/img/tech.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+

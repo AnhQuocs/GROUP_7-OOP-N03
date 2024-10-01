@@ -49,7 +49,7 @@ public class MainController {
             stage.setTitle("Thông tin sinh viên");
         } catch (IOException e) {
             e.printStackTrace();
-            showAlert("Đã xảy ra lỗi khi quay lại danh sách.");
+            showAlert("Đã xảy ra lỗi khi chuyển.");
         }
     }
 
@@ -74,7 +74,7 @@ public class MainController {
             stage.setTitle("Lựa chọn");
         } catch (IOException e) {
             e.printStackTrace();
-            showAlert("Đã xảy ra lỗi khi quay lại danh sách.");
+            showAlert("Đã xảy ra lỗi khi chuyển.");
         }
     }
 
@@ -107,7 +107,32 @@ public class MainController {
             stage.setTitle("Lịch học / Lịch thi");
         } catch (IOException e) {
             e.printStackTrace();
-            showAlert("Đã xảy ra lỗi khi quay lại danh sách.");
+            showAlert("Đã xảy ra lỗi khi chuyển.");
+        }
+    }
+
+    @FXML
+    private void onDiemRL(ActionEvent event)
+    {
+        try {
+            // Tải file FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fxml/DiemRL.fxml"));
+            Parent danhSachView = loader.load();
+
+            // Lấy Stage hiện tại từ sự kiện
+            Stage stage = (Stage) DiemHP.getScene().getWindow();
+
+            // Tạo scene mới
+            Scene scene = new Scene(danhSachView);
+
+            // Đặt scene mới cho Stage và hiển thị
+            stage.setScene(scene);
+            stage.show();
+
+            stage.setTitle("Điểm Rèn Luyện");
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Đã xảy ra lỗi khi chuyển.");
         }
     }
 }

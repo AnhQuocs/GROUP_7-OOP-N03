@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:controller="com.example.projectfx.controller.DSLichHocController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="108.0" prefWidth="820.0">
+         <children>
+            <GridPane prefHeight="86.0" prefWidth="903.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Lịch Học" GridPane.halignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="themLich" mnemonicParsing="false" text="+ Thêm Lịch" GridPane.halignment="RIGHT">
+                     <GridPane.margin>
+                        <Insets right="120.0" top="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="suaXoaLich" mnemonicParsing="false" text="Sửa/Xóa" GridPane.halignment="RIGHT">
+                     <GridPane.margin>
+                        <Insets right="20.0" top="30.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Separator prefWidth="200.0" GridPane.valignment="BOTTOM" />
+                  <Label opacity="0.8" style="-fx-font-style: italic;" text="(Click vào mỗi lịch học để sửa/ xóa lịch học)" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="3.0" right="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Button fx:id="quayLai" onAction="#onQuayLai" mnemonicParsing="false" text="&lt; Quay lại" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="lichThi" onAction="#onLichThi" mnemonicParsing="false" text="Lịch Thi &gt;" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox layoutY="103.0" prefHeight="351.0" prefWidth="820.0">
+         <children>
+            <TableView fx:id="tableView" prefHeight="351.0" prefWidth="822.0">
+              <columns>
+                <TableColumn fx:id="hocKyColumn" prefWidth="130.0" text="Học kỳ" />
+                <TableColumn fx:id="monHocColumn" prefWidth="150.0" text="Môn học" />
+                  <TableColumn fx:id="ngayHocColumn" prefWidth="120.0" text="Ngày học" />
+                  <TableColumn fx:id="caHocColumn" prefWidth="120.0" text="Ca học" />
+                  <TableColumn fx:id="phongHocColumn" prefWidth="150.0" text="Phòng học" />
+                  <TableColumn fx:id="soLuongSinhVienColumn" prefWidth="150.0" text="Số lượng sinh viên" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </children>
+</Pane>

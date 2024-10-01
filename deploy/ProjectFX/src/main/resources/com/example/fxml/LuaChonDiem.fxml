@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectfx.controller.LuaChonDiemController">
+   <children>
+      <GridPane layoutY="-1.0" prefHeight="300.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="123.9999755859375" minHeight="10.0" prefHeight="76.80000610351563" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="126.19999999999999" minHeight="10.0" prefHeight="93.59999389648438" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="164.8000061035156" minHeight="10.0" prefHeight="131.2" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Lựa Chọn" textFill="BLUE" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="16.0" />
+               </GridPane.margin>
+            </Label>
+            <Button fx:id="NhapDiem" mnemonicParsing="false" onAction="#onNhapDiem" text="Nhập điểm" textFill="BLUE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="8.0" left="16.0" right="16.0" top="8.0" />
+               </padding>
+            </Button>
+            <Button fx:id="TraCuuDiem" onAction="#onTraCuuDiem" mnemonicParsing="false" text="Tra cứu điểm" textFill="BLUE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="8.0" left="16.0" right="16.0" top="8.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="16.0" />
+               </GridPane.margin>
+            </Button>
+            <Separator prefWidth="200.0" GridPane.valignment="BOTTOM" />
+            <Button fx:id="quayLaiDS" mnemonicParsing="false" onAction="#onQuayLaiDS" text="&lt; Quay lại" GridPane.valignment="TOP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" top="10.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</Pane>

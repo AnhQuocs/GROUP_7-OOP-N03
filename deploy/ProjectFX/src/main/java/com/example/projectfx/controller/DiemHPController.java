@@ -267,6 +267,48 @@ public class DiemHPController {
             return; // Ngừng thực hiện nếu tổng hệ số không đúng
         }
 
+        // Kiểm tra các điểm phải lớn hơn hoặc bằng 0 và nhỏ hơn 10
+        float cc1Value, cc2Value, baiTapValue, thucHanhValue, giuaKyValue, cuoiKyValue;
+
+        try {
+            cc1Value = Float.parseFloat(cc1);
+            cc2Value = Float.parseFloat(cc2);
+            baiTapValue = baiTap.isEmpty() ? 0 : Float.parseFloat(baiTap);
+            thucHanhValue = thucHanh.isEmpty() ? 0 : Float.parseFloat(thucHanh);
+            giuaKyValue = Float.parseFloat(giuaKy);
+            cuoiKyValue = Float.parseFloat(cuoiKy);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            showAlertERROR("Giá trị điểm không hợp lệ.");
+            return; // Ngừng thực hiện nếu có lỗi
+        }
+
+        // Kiểm tra giá trị điểm
+        if (cc1Value < 0 || cc1Value > 10) {
+            showAlertERROR("Điểm 'CC1' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            return;
+        }
+        if (cc2Value < 0 || cc2Value > 10) {
+            showAlertERROR("Điểm 'CC2' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            return;
+        }
+        if (baiTapValue < 0 || baiTapValue > 10) {
+            showAlertERROR("Điểm 'Bài tập' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            return;
+        }
+        if (thucHanhValue < 0 || thucHanhValue > 10) {
+            showAlertERROR("Điểm 'Thực hành' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            return;
+        }
+        if (giuaKyValue < 0 || giuaKyValue > 10) {
+            showAlertERROR("Điểm 'Giữa kỳ' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            return;
+        }
+        if (cuoiKyValue < 0 || cuoiKyValue > 10) {
+            showAlertERROR("Điểm 'Cuối kỳ' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            return;
+        }
+
         // Lưu hoặc cập nhật điểm vào cơ sở dữ liệu
         try (Connection connection = DataBaseConnection.getConnection()) {
             // Kiểm tra xem bản ghi có tồn tại trong bảng diemHP hay không (dựa trên mã sinh viên và môn học)
@@ -290,13 +332,6 @@ public class DiemHPController {
                     return;
                 }
             }
-
-            float cc1Value = Float.parseFloat(cc1);
-            float cc2Value = Float.parseFloat(cc2);
-            float baiTapValue = baiTap.isEmpty() ? 0 : Float.parseFloat(baiTap);
-            float thucHanhValue = thucHanh.isEmpty() ? 0 : Float.parseFloat(thucHanh);
-            float giuaKyValue = Float.parseFloat(giuaKy);
-            float cuoiKyValue = Float.parseFloat(cuoiKy);
 
             float diemHe10 =(float) (cc1Value*heSoCC1/100 + cc2Value*heSoCC2/100 + baiTapValue*heSoBaiTap/100 + thucHanhValue*heSoThucHanh/100 + giuaKyValue*heSoGiuaKy/100 + cuoiKyValue*heSoCuoiKy/100);
             float diemHe4 =(float) (convertToHe4(diemHe10));
@@ -382,21 +417,30 @@ public class DiemHPController {
         }
     }
 
-
     private void showAlertERROR(String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Lỗi");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+        try {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Lỗi");
+            alert.setHeaderText(null);
+            alert.setContentText(message);
+            alert.showAndWait();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void showAlertINFOR(String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Lỗi");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+        try {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Lỗi");
+            alert.setHeaderText(null);
+            alert.setContentText(message);
+            alert.showAndWait();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

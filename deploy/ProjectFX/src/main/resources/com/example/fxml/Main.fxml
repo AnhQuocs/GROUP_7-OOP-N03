@@ -33,7 +33,7 @@
                <children>
                   <Button fx:id="ThongTinSinhVien" mnemonicParsing="false" onAction="#onThongTinSinhVien" prefHeight="26.0" prefWidth="130.0" text="Thông Tin Sinh Viên" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Button fx:id="DiemHP" mnemonicParsing="false" onAction="#onDiemHP" prefHeight="26.0" prefWidth="130.0" text="Điểm Học Phần" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                  <Button fx:id="DiemRL" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" text="Điểm Rèn Luyện" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Button fx:id="DiemRL" mnemonicParsing="false" onAction="#onDiemRL" prefHeight="26.0" prefWidth="130.0" text="Điểm Rèn Luyện" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Label style="-fx-text-fill: #fff;" text="Quản Lý Sinh Viên" GridPane.columnIndex="2" GridPane.halignment="CENTER">
                      <font>
                         <Font size="22.0" />

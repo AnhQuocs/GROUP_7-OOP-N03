@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectfx.controller.DiemRLController">
+   <children>
+      <Separator layoutY="184.0" prefHeight="6.0" prefWidth="1100.0" />
+      <GridPane layoutX="-5.0" layoutY="-4.0" prefHeight="169.0" prefWidth="1108.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.3999908447266" minWidth="10.0" prefWidth="278.3999908447266" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.80002441406248" minWidth="10.0" prefWidth="156.0000091552734" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="157.5999755859375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.80002441406248" minWidth="10.0" prefWidth="184.80002441406248" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.20001220703136" minWidth="10.0" prefWidth="198.5999755859376" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="73.40001220703125" minHeight="10.0" prefHeight="73.40001220703125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="67.39999999999999" minHeight="10.0" prefHeight="50.399987792968744" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="67.39999999999999" minHeight="10.0" prefHeight="50.399987792968744" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="54.0" prefWidth="177.0" text="Điểm Rèn Luyện" GridPane.columnIndex="2" GridPane.halignment="LEFT">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Chọn học kỳ" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <SplitMenuButton fx:id="chonHocKySplit" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="HK1 2024-2025" />
+               </items>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </SplitMenuButton>
+            <Label text="Mã sinh viên" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="maSinhVienField" prefHeight="26.0" prefWidth="110.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="searchButton" onAction="#onSearch" mnemonicParsing="false" prefHeight="30.0" prefWidth="83.0" text="Đồng ý" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="quayLaiButton" onAction="#onQuayLai" mnemonicParsing="false" text="&lt; Quay lại" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="10.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="traCuuButton" onAction="#onTraCuu" mnemonicParsing="false" text="Tra cứu điểm &gt;" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+      <HBox layoutX="-2.0" layoutY="324.0" prefHeight="159.0" prefWidth="1110.0">
+         <children>
+            <GridPane prefHeight="268.0" prefWidth="1102.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="493.5999755859375" minWidth="10.0" prefWidth="493.5999755859375" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.20001220703125" minWidth="10.0" prefWidth="242.4000244140625" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nhập điểm rèn luyện của sinh viên:" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="nhapDiemRLField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="278.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
+                  <Button fx:id="luuDiemRLButton" onAction="#onLuuDiem" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="66.0" text="Lưu" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" right="80.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox layoutY="223.0" prefHeight="101.0" prefWidth="1100.0">
+         <children>
+            <TableView fx:id="tableView" prefHeight="125.0" prefWidth="1100.0">
+               <columns>
+                  <TableColumn fx:id="hoVaDemColumn" prefWidth="100.0" text="Họ và Đệm" />
+                  <TableColumn fx:id="tenColumn" prefWidth="70.0" text="Tên" />
+                  <TableColumn fx:id="maSinhVienColumn" prefWidth="85.0" text="Mã Sinh Viên" />
+                  <TableColumn fx:id="gTinhColumn" prefWidth="70.0" text="Giới Tính" />
+                  <TableColumn fx:id="dateSinhColumn" prefWidth="85.0" text="Ngày Sinh" />
+                  <TableColumn fx:id="noiSinhColumn" prefWidth="85.0" text="Nơi Sinh" />
+                  <TableColumn fx:id="emailColumn" prefWidth="190.0" text="Email" />
+                  <TableColumn fx:id="soDienThoaiColumn" prefWidth="85.0" text="Số Điện Thoại" />
+                  <TableColumn fx:id="khoaDTColumn" prefWidth="90.0" text="Khóa Đào Tạo" />
+                  <TableColumn fx:id="nganhHocColumn" prefWidth="150.0" text="Ngành" />
+                  <TableColumn fx:id="lopHocColumn" prefWidth="87.0" text="Lớp" />
+               </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox layoutX="1.0" layoutY="186.0" prefHeight="48.0" prefWidth="1100.0">
+         <children>
+            <GridPane prefHeight="28.0" prefWidth="1100.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Thông Tin Sinh Viên" GridPane.halignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</Pane>
