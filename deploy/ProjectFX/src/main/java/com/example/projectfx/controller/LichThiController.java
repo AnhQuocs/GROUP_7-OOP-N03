@@ -43,16 +43,22 @@ public class LichThiController {
     private SplitMenuButton thoiGianThiSplit;
 
     @FXML
+    private SplitMenuButton kyThiSplit;
+
+    @FXML
+    private SplitMenuButton hinhThucSplit;
+
+    @FXML
     private Button quayLaiBtn;
 
     @FXML
     private Button lamMoiBtn;
 
     @FXML
-    private Button luuLichHocBtn;
+    private Button luuLichThiBtn;
 
     @FXML
-    private Button xoaLichHocBtn;
+    private Button xoaLichThiBtn;
 
     @FXML
     public void initialize() {
@@ -75,6 +81,14 @@ public class LichThiController {
         for (MenuItem item : thoiGianThiSplit.getItems()) {
             item.setOnAction(event -> thoiGianThiSplit.setText(item.getText()));
         }
+
+        for (MenuItem item : kyThiSplit.getItems()) {
+            item.setOnAction(event -> kyThiSplit.setText(item.getText()));
+        }
+
+        for (MenuItem item : hinhThucSplit.getItems()) {
+            item.setOnAction(event -> hinhThucSplit.setText(item.getText()));
+        }
     }
 
     @FXML
@@ -84,12 +98,16 @@ public class LichThiController {
         phongThiSplit.setText("");
         caThiSplit.setText("");
         thoiGianThiSplit.setText("");
+        kyThiSplit.setText("");
+        hinhThucSplit.setText("");
 
         hocKySplit.setText(lichThi.getHocKy());
         monThiSplit.setText(lichThi.getMonThi());
         phongThiSplit.setText(lichThi.getPhongThi());
         caThiSplit.setText(lichThi.getCaThi());
         thoiGianThiSplit.setText(lichThi.getThoiGianThi());
+        kyThiSplit.setText(lichThi.getKyThi());
+        hinhThucSplit.setText(lichThi.getHinhThuc());
 
         String ngayValue = lichThi.getNgayThi(); // Đây là chuỗi từ LichThi
         try {
@@ -114,6 +132,8 @@ public class LichThiController {
             // Tạo scene mới
             Scene scene = new Scene(danhSachView);
 
+            stage.setTitle("Lịch Thi");
+
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);
             stage.show();
@@ -121,6 +141,9 @@ public class LichThiController {
             e.printStackTrace();
             showAlert("Đã xảy ra lỗi khi quay lại.");
         }
+
+        SinhVienDAO dao = new SinhVienDAO();
+        List<LichThi> lichHocList = dao.getAllLichThi();
     }
 
     @FXML
@@ -131,6 +154,8 @@ public class LichThiController {
         caThiSplit.setText("");
         thoiGianThiSplit.setText("");
         ngayThiPicker.setValue(null);
+        kyThiSplit.setText("");
+        hinhThucSplit.setText("");
     }
 
     @FXML
@@ -153,10 +178,12 @@ public class LichThiController {
         String caThi = caThiSplit.getText();
         String phongThi = phongThiSplit.getText();
         String thoiGianThi = thoiGianThiSplit.getText();
+        String kyThi = kyThiSplit.getText();
+        String hinhThuc = hinhThucSplit.getText();
 
         // Lưu vào cơ sở dữ liệu
         try (Connection connection = DataBaseConnection.getConnection()) {
-            // Kiểm tra xem lịch thiđã tồn tại chưa
+            // Kiểm tra xem lịch thi đã tồn tại chưa
             String checkQuery = "SELECT * FROM lichThi WHERE monThi = ? AND hocKy = ?";
             PreparedStatement checkStmt = connection.prepareStatement(checkQuery);
             checkStmt.setString(1, monThi);
@@ -173,7 +200,7 @@ public class LichThiController {
             }
 
             // Thêm lịch thi mới
-            String query = "INSERT INTO lichTHi (hocKy, monThi, ngayThi, caThi, phongThi, thoiGianThi) VALUES (?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO lichTHi (hocKy, monThi, ngayThi, caThi, phongThi, thoiGianThi, kyThi, hinhThuc) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(query);
 
             stmt.setString(1, hocKy);
@@ -182,6 +209,8 @@ public class LichThiController {
             stmt.setString(4, caThi);
             stmt.setString(5, phongThi);
             stmt.setString(6, thoiGianThi);
+            stmt.setString(7, kyThi);
+            stmt.setString(8, hinhThuc);
 
             int rowsInserted = stmt.executeUpdate();
             if (rowsInserted > 0) {
@@ -190,6 +219,55 @@ public class LichThiController {
         } catch (SQLException e) {
             e.printStackTrace();
             showAlert("Đã xảy ra lỗi khi lưu thông tin vào cơ sở dữ liệu.");
+        }
+    }
+
+    @FXML
+    public void onXoaLichThi(ActionEvent event) {
+        String monThi = monThiSplit.getText();
+        if (monThi.isEmpty()) {
+            showAlert("Vui lòng chọn môn học để xóa.");
+            return;
+        }
+
+        String hocKy = hocKySplit.getText();
+        if (hocKy.isEmpty()) {
+            showAlert("Vui lòng chọn học kỳ để xóa.");
+            return;
+        }
+
+        hocKySplit.setText("");
+        monThiSplit.setText("");
+        caThiSplit.setText("");
+        phongThiSplit.setText("");
+        ngayThiPicker.setValue(null);
+        thoiGianThiSplit.setText("");
+        kyThiSplit.setText("");
+        hinhThucSplit.setText("");
+
+        deleteLichThi(monThi, hocKy);
+    }
+
+    private void deleteLichThi(String monThi, String hocKy) {
+        try (Connection connection = DataBaseConnection.getConnection()) {
+            String query = "DELETE FROM lichThi WHERE monThi = ? AND hocKy = ?";
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, monThi);
+            stmt.setString(2, hocKy);
+
+            int rowsDeleted = stmt.executeUpdate();
+            if (rowsDeleted > 0) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Thông báo");
+                alert.setHeaderText(null);
+                alert.setContentText("Xóa lịch thi thành công!");
+                alert.showAndWait();
+            } else {
+                showAlert("Không tìm thấy lịch thi để xóa.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            showAlert("Có lỗi xảy ra trong quá trình xóa lịch thi.");
         }
     }
 
