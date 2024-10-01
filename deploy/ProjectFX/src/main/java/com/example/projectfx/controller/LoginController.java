@@ -47,6 +47,8 @@ public class LoginController {
                 Scene scene = new Scene(root, 916, 600);
                 stage.setScene(scene);
                 stage.show();
+
+                stage.setTitle("Quản lý sinh viên");
             }
             catch (IOException e)
             {

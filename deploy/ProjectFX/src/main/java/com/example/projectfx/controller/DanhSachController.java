@@ -1,7 +1,7 @@
 package com.example.projectfx.controller;
 
 import com.example.projectfx.database.DataBaseConnection;
-import com.example.projectfx.method.SinhVien;
+import com.example.projectfx.model.SinhVien;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -171,7 +171,7 @@ public class DanhSachController {
             Parent root = loader.load();
 
             // Lấy controller của NhapThongTin
-            InfoController controller = loader.getController();
+            InforController controller = loader.getController();
             controller.hienThiThongTinSinhVien(sinhVien);  // Gửi thông tin sinh viên
 
             // Chuyển sang scene NhapThongTin
