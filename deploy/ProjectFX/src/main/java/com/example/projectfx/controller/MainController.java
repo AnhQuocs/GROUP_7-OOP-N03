@@ -45,6 +45,8 @@ public class MainController {
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);
             stage.show();
+
+            stage.setTitle("Thông tin sinh viên");
         } catch (IOException e) {
             e.printStackTrace();
             showAlert("Đã xảy ra lỗi khi quay lại danh sách.");
@@ -55,19 +57,21 @@ public class MainController {
     private void onDiemHP(ActionEvent event)
     {
         try {
-            // Tải file FXML cho scene DanhSach
+            // Tải file FXML
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fxml/LuaChonDiem.fxml"));
             Parent danhSachView = loader.load();
 
             // Lấy Stage hiện tại từ sự kiện
             Stage stage = (Stage) DiemHP.getScene().getWindow();
 
-            // Tạo scene mới cho DanhSach
+            // Tạo scene mới
             Scene scene = new Scene(danhSachView);
 
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);
             stage.show();
+
+            stage.setTitle("Lựa chọn");
         } catch (IOException e) {
             e.printStackTrace();
             showAlert("Đã xảy ra lỗi khi quay lại danh sách.");
@@ -80,5 +84,30 @@ public class MainController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    @FXML
+    private void onLichHocThi(ActionEvent event)
+    {
+        try {
+            // Tải file FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fxml/DSLichHoc.fxml"));
+            Parent danhSachView = loader.load();
+
+            // Lấy Stage hiện tại từ sự kiện
+            Stage stage = (Stage) DiemHP.getScene().getWindow();
+
+            // Tạo scene mới
+            Scene scene = new Scene(danhSachView);
+
+            // Đặt scene mới cho Stage và hiển thị
+            stage.setScene(scene);
+            stage.show();
+
+            stage.setTitle("Lịch học / Lịch thi");
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Đã xảy ra lỗi khi quay lại danh sách.");
+        }
     }
 }
