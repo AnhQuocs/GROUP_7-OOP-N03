@@ -33,7 +33,7 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Button fx:id="quaylai" mnemonicParsing="false" text="&lt; Quay lại" GridPane.valignment="TOP">
+                  <Button fx:id="quayLaiButton" onAction="#onQuayLai" mnemonicParsing="false" text="&lt; Quay lại" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets left="10.0" top="10.0" />
                      </GridPane.margin>
@@ -68,7 +68,7 @@
                         <Insets right="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <SplitMenuButton fx:id="chonHocKy" prefWidth="150.0" GridPane.columnIndex="1">
+                  <SplitMenuButton fx:id="chonHocKySplit" prefWidth="150.0" GridPane.columnIndex="1">
                      <items>
                         <MenuItem text="HK1 2024-2025" />
                      </items>
@@ -81,9 +81,9 @@
                         <Insets right="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <TextField fx:id="maSinhVienTextField" maxWidth="-Infinity" minWidth="-Infinity" GridPane.columnIndex="3" />
+                  <TextField fx:id="maSinhVienField" maxWidth="-Infinity" minWidth="-Infinity" GridPane.columnIndex="3" />
                   <Separator prefWidth="200.0" GridPane.columnSpan="4" GridPane.valignment="TOP" />
-                  <Button fx:id="traCuuButton" mnemonicParsing="false" text="Tra cứu" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                  <Button fx:id="traCuuButton" onAction="#handleTraCuuButtonAction" mnemonicParsing="false" text="Tra cứu" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -100,14 +100,14 @@
       </HBox>
       <HBox layoutY="179.0" prefHeight="222.0" prefWidth="700.0">
          <children>
-            <TableView fx:id="diemTableView" prefHeight="324.0" prefWidth="799.0">
+            <TableView fx:id="tableView" prefHeight="324.0" prefWidth="799.0">
                <columns>
                   <TableColumn fx:id="hoVaDemColumn" prefWidth="130.0" text="Họ và đệm" />
                   <TableColumn fx:id="tenColumn" prefWidth="100.0" text="Tên" />
                   <TableColumn fx:id="maSinhVienColumn" minWidth="20.0" prefWidth="100.0" text="Mã sinh viên" />
-                  <TableColumn fx:id="monHocColumn" prefWidth="130.0" text="Khóa đào tạo" />
-                  <TableColumn fx:id="cc1Column" prefWidth="120.0" text="Lớp" />
-                  <TableColumn fx:id="cc2Column" prefWidth="120.0" text="Điểm rèn luyện" />
+                  <TableColumn fx:id="khoaDaoTaoColumn" prefWidth="130.0" text="Khóa đào tạo" />
+                  <TableColumn fx:id="lopHocColumn" prefWidth="120.0" text="Lớp" />
+                  <TableColumn fx:id="diemRenLuyenColumn" prefWidth="120.0" text="Điểm rèn luyện" />
                </columns>
             </TableView>
          </children>
