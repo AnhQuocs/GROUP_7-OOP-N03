@@ -283,7 +283,7 @@ public class DiemHPController {
             return; // Ngừng thực hiện nếu có lỗi
         }
 
-        // Kiểm tra giá trị điểm
+        // Thêm điều kiện kiểm tra điểm hợp lệ từ 0 đến 10
         if (cc1Value < 0 || cc1Value > 10) {
             showAlertERROR("Điểm 'CC1' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
             return;
