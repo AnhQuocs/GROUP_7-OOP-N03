@@ -126,9 +126,8 @@
 
 ### **Màn hình ứng dụng**
 
-- **Màn hình đăng nhập**:
-<img src="img/Dangnhap.png">
-
 - **Màn hình chính**:
 <img src="img/Giaodienungdung.jpg">
----
+
+-**Màn hình đăng nhập của dự án**:
+<img src="img/LoginScreen.png">
