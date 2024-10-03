@@ -156,6 +156,9 @@ public class DanhSachController {
             Scene scene = new Scene(root);
 
             Stage stage = (Stage) themSinhVienButton.getScene().getWindow();
+
+            stage.setTitle("Nhập thông tin sinh viên");
+
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
@@ -177,6 +180,8 @@ public class DanhSachController {
             // Chuyển sang scene NhapThongTin
             Stage stage = (Stage) tableView.getScene().getWindow();
             Scene scene = new Scene(root);
+
+            stage.setTitle("Sửa thông tin sinh viên");
 
             // Áp dụng CSS nếu cần
             scene.getStylesheets().add(getClass().getResource("/com/example/css/style.css").toExternalForm());
@@ -205,6 +210,8 @@ public class DanhSachController {
             Stage stage = (Stage) quayLaiDS.getScene().getWindow();
 
             Scene scene = new Scene(danhSachView);
+
+            stage.setTitle("Quản lý sinh viên");
 
             stage.setScene(scene);
             stage.show();

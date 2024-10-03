@@ -151,6 +151,8 @@ public class TraCuuDiemController {
             // Tạo scene mới
             Scene scene = new Scene(danhSachView);
 
+            stage.setTitle("Lựa chọn");
+
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);
             stage.show();

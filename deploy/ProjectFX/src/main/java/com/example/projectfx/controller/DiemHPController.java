@@ -283,7 +283,7 @@ public class DiemHPController {
             return; // Ngừng thực hiện nếu có lỗi
         }
 
-        // Thêm điều kiện kiểm tra điểm hợp lệ từ 0 đến 10
+        // Kiểm tra giá trị điểm
         if (cc1Value < 0 || cc1Value > 10) {
             showAlertERROR("Điểm 'CC1' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
             return;
@@ -492,6 +492,8 @@ public class DiemHPController {
 
             // Tạo scene mới
             Scene scene = new Scene(danhSachView);
+
+            stage.setTitle("Lựa chọn");
 
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);

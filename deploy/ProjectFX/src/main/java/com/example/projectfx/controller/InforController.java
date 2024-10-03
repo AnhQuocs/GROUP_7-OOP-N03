@@ -343,6 +343,8 @@ public class InforController {
             // Tạo scene mới cho DanhSach
             Scene scene = new Scene(danhSachView);
 
+            stage.setTitle("Thông tin sinh viên");
+
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);
             stage.show();

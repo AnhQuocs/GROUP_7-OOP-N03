@@ -261,6 +261,8 @@ public class DiemRLController {
             // Tạo scene mới
             Scene scene = new Scene(danhSachView);
 
+            stage.setTitle("Quản lý sinh viên");
+
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);
             stage.show();
@@ -282,6 +284,8 @@ public class DiemRLController {
 
             // Tạo scene mới
             Scene scene = new Scene(danhSachView);
+
+            stage.setTitle("Tra cứu điểm");
 
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);

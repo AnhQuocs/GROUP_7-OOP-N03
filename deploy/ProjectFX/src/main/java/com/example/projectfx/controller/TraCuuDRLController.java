@@ -126,6 +126,8 @@ public class TraCuuDRLController {
             // Tạo scene mới
             Scene scene = new Scene(danhSachView);
 
+            stage.setTitle("Điểm rèn luyện");
+
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);
             stage.show();

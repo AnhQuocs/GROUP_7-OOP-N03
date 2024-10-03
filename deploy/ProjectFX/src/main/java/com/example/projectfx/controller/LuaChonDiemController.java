@@ -34,6 +34,8 @@ public class LuaChonDiemController {
             // Tạo scene mới
             Scene scene = new Scene(danhSachView);
 
+            stage.setTitle("Nhập điểm");
+
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);
             stage.show();
@@ -55,6 +57,8 @@ public class LuaChonDiemController {
 
             // Tạo scene mới
             Scene scene = new Scene(danhSachView);
+
+            stage.setTitle("Tra cứu điểm");
 
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);
@@ -82,6 +86,8 @@ public class LuaChonDiemController {
             Stage stage = (Stage) quayLaiDS.getScene().getWindow();
 
             Scene scene = new Scene(danhSachView);
+
+            stage.setTitle("Quản lý sinh viên");
 
             stage.setScene(scene);
             stage.show();

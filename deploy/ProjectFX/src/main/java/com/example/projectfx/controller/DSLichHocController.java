@@ -127,6 +127,9 @@ public class DSLichHocController {
             Scene scene = new Scene(root);
 
             Stage stage = (Stage) themLich.getScene().getWindow();
+
+            stage.setTitle("Thêm Lịch Học");
+
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
@@ -146,6 +149,8 @@ public class DSLichHocController {
             // Chuyển sang scene NhapThongTin
             Stage stage = (Stage) tableView.getScene().getWindow();
             Scene scene = new Scene(root);
+
+            stage.setTitle("Sửa Lịch Học");
 
             // Áp dụng CSS nếu cần
             scene.getStylesheets().add(getClass().getResource("/com/example/css/style.css").toExternalForm());
@@ -170,6 +175,8 @@ public class DSLichHocController {
             // Tạo scene mới
             Scene scene = new Scene(danhSachView);
 
+            stage.setTitle("Quản lý sinh viên");
+
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);
             stage.show();
@@ -191,6 +198,8 @@ public class DSLichHocController {
 
             // Tạo scene mới
             Scene scene = new Scene(danhSachView);
+
+            stage.setTitle("Lịch Thi");
 
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);

@@ -133,6 +133,9 @@ public class DSLichThiController {
 
             Stage stage = (Stage) themLichThiButton.getScene().getWindow();
             stage.setScene(scene);
+
+            stage.setTitle("Thêm Lịch Thi");
+
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -153,6 +156,9 @@ public class DSLichThiController {
             Scene scene = new Scene(root);
 
             stage.setScene(scene);
+
+            stage.setTitle("Sửa Lịch Thi");
+
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -171,6 +177,8 @@ public class DSLichThiController {
 
             // Tạo scene mới
             Scene scene = new Scene(danhSachView);
+
+            stage.setTitle("Lịch Học");
 
             // Đặt scene mới cho Stage và hiển thị
             stage.setScene(scene);
