@@ -120,7 +120,7 @@
 
 3. **Chạy chương trình**:
    - Import project vào IDE và cấu hình JavaFX.
-   - Chạy file `Main.java` để khởi động ứng dụng quản lý sinh viên.
+   - Chạy file `App.java` để khởi động ứng dụng quản lý sinh viên.
 
 ---
 
