@@ -10,7 +10,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.Scanner;
 
 public class LoginController {
     @FXML
@@ -22,11 +23,35 @@ public class LoginController {
     @FXML
     private Button loginButton;
 
-    private final String ACCOUNT = "admin";
-    private final String PASSWORD = "123456";
+    private String ACCOUNT;
+    private String PASSWORD;
+
+
+    // Phương thức để đọc tài khoản và mật khẩu từ file
+    private void loadCredentialsFromFile() throws IOException {
+
+        InputStream inputStream = getClass().getResourceAsStream("/com/example/datafile/login.txt");
+
+        if (inputStream == null) {
+            showAlert("Không tìm thấy file login.txt");
+        }
+        else
+        {
+            Scanner scanner = new Scanner(inputStream);
+            if (scanner.hasNextLine()) {
+                String[] data = scanner.nextLine().split(", ");
+                if (data.length == 2) {
+                    ACCOUNT = data[0];
+                    PASSWORD = data[1];
+                }
+            }
+            scanner.close();
+        }
+    }
 
     @FXML
-    private void handleLogin() {
+    private void handleLogin() throws IOException {
+        loadCredentialsFromFile();
         String username = usernameField.getText();
         String password = passwordField.getText();
 
@@ -49,14 +74,10 @@ public class LoginController {
                 stage.show();
 
                 stage.setTitle("Quản lý sinh viên");
-            }
-            catch (IOException e)
-            {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-
-        else {
+        } else {
             showAlert("Sai tài khoản hoặc mật khẩu!");
         }
     }
