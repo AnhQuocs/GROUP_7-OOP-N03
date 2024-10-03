@@ -129,5 +129,5 @@
 - **Màn hình chính**:
 <img src="img/Giaodienungdung.jpg">
 
--**Màn hình đăng nhập của dự án**:
+- **Màn hình đăng nhập của dự án**:
 <img src="img/LoginScreen.png">
