@@ -120,15 +120,27 @@
 
 3. **Chạy chương trình**:
    - Import project vào IDE và cấu hình JavaFX.
-   - Chạy file `Main.java` để khởi động ứng dụng quản lý sinh viên.
+   - Chạy file `App.java` để khởi động ứng dụng quản lý sinh viên.
 
 ---
 
 ### **Màn hình ứng dụng**
 
-- **Màn hình đăng nhập**:
-<img src="img/Dangnhap.png">
-
 - **Màn hình chính**:
 <img src="img/Giaodienungdung.jpg">
----
+
+- **Màn hình đăng nhập của dự án**:
+<img src="img/LoginScreen.png">
+
+- **Dữ liệu từ các đối tượng Object sẽ đi vào trong CSDL và đọc ra từ cơ sở dữ liệu**:
+- Đối tượng SinhVien: ho_va_dem, ten, ma_sinh_vien, email, so_dien_thoai, date_sinh, gTinh, noi_sinh, khoa_dao_tao, nganh_hoc, lop_hoc.
+- Đối tượng DiemHocPhan: ho_va_dem, ten, ma_sinh_vien, tenHocPhan, cc1, cc2, baiTap, thucHanh, giuaKy, cuoiKy, diemHe10, diemHe4.
+- Đối tượng DiemRenLuyen: hoVaDem, tem, ma_sinh_vien, khoaDaoTao, lopHoc, diemRenLuyen.
+- Đối tượng LichHoc: hocKy, monHoc, ngayHoc, caHoc, phongHoc, soLuongSinhVien.
+- Đối tượng LichThi: hocKy, monThi, ngayThi, caThi, phongThi, thoiGianThi, kyThi, hinhThuc.
+
+- **Save Infomation**:
+<img src="img/saveinformation.png">
+
+- **Database**:
+<img src="img/databse.png">
