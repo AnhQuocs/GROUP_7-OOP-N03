@@ -132,7 +132,7 @@
 - **Màn hình đăng nhập của dự án**:
 <img src="img/LoginScreen.png">
 
-- **Database:
+- **Database**:
 - Table sinh viên:
 CREATE TABLE sinhvien (
     ho_va_dem VARCHAR(100),
@@ -146,4 +146,56 @@ CREATE TABLE sinhvien (
     khoa_dao_tao VARCHAR(50),
     nganh_hoc VARCHAR(50),
     lop_hoc VARCHAR(50)
+);
+
+- Table Điểm học phần:
+ create table diemHP 
+(
+	ho_va_dem varchar(100),
+    ten varchar(50),
+	ma_sinh_vien VARCHAR(20),
+	tenHocPhan varchar(30) not null,
+	cc1 decimal(5, 2) not null,
+    cc2 decimal(5, 2) not null,
+    baiTap decimal(5, 2) not null,
+    thucHanh decimal(5, 2) not null,
+    giuaKy decimal(5, 2) not null,
+    cuoiKy decimal(5, 2) not null,
+    diemHe10 decimal(5, 2) not null,
+    diemHe4 decimal(5, 2) not null
+); 
+
+- Table Điểm Rèn Luyện:
+  create table diemRL
+(
+    hoVaDem varchar(50) not null,
+    ten varchar(20) not null,
+	ma_sinh_vien varchar(9) not null,
+    khoaDaoTao varchar(10) not null,
+    lopHoc varchar(30) not null,
+    diemRenLuyen varchar(3) not null
+);
+
+- Table Lịch học:
+  create table lichHoc
+(	
+	hocKy varchar(50) not null,
+	monHoc varchar(100) not null,
+	ngayHoc date not null,
+    caHoc varchar(50) not null,
+    phongHoc varchar(50) not null,
+    soLuongSinhVien integer not null
+);
+
+- Table Lịch thi:
+  create table lichThi
+(
+	hocKy varchar(50) not null,
+	monThi varchar(100) not null,
+    ngayThi date not null,
+    caThi varchar(20) not null,
+    phongThi varchar(30) not null,
+    thoiGianThi varchar(10) not null,
+    kyThi varchar(50) not null,
+    hinhThuc varchar(50) not null
 );
