@@ -131,3 +131,19 @@
 
 - **Màn hình đăng nhập của dự án**:
 <img src="img/LoginScreen.png">
+
+- **Database:
+- Table sinh viên:
+CREATE TABLE sinhvien (
+    ho_va_dem VARCHAR(100),
+    ten VARCHAR(50),
+    ma_sinh_vien VARCHAR(20) unique,
+    email VARCHAR(100),
+    so_dien_thoai VARCHAR(15),
+    date_sinh DATETIME,
+    gTinh VARCHAR(10),
+    noi_sinh VARCHAR(50),
+    khoa_dao_tao VARCHAR(50),
+    nganh_hoc VARCHAR(50),
+    lop_hoc VARCHAR(50)
+);
