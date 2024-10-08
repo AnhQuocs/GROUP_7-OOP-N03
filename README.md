@@ -19,8 +19,7 @@
 ---
 
 ### **Giới thiệu**
-Đây là một dự án xây dựng một ứng dụng quản lý sinh viên bằng ngôn ngữ Java với giao diện JavaFX. Ứng dụng sẽ hỗ trợ các chức năng cơ bản như cập nhật thông tin sinh viên, lịch học/lịch thi, điểm học phần, điểm rèn luyện, tra cứu điểm điểm học phần/điểm rèn luyện và lưu trữ dữ liệu xuống file nhị phân.
-
+Đây là một dự án xây dựng một ứng dụng quản lý sinh viên bằng ngôn ngữ Java với giao diện JavaFX. Ứng dụng sẽ hỗ trợ các chức năng cơ bản như cập nhật thông tin sinh viên, lịch học/lịch thi, điểm học phần, điểm rèn luyện, tra cứu điểm điểm học phần/điểm rèn luyện và lưu trữ dữ liệu vào cơ sở dữ liệu.
 ---
 
 ### **Thành viên nhóm**
@@ -35,14 +34,14 @@
    - Ứng dụng sử dụng giao diện đồ họa JavaFX.
   
 2. **Chức năng**:
-   - Nhập thông tin sinh viên: Thêm, sửa, xóa sinh viên; liệt kê sinh viên.
+   - Nhập thông tin sinh viên: Thêm, sửa, xóa sinh viên, liệt kê danh sách sinh viên.
    - Cập nhật lịch học/lịch thi.
-   - Nhập điểm rèn luyện và xếp loại cho sinh viên.
-   - Nhập điểm học phần và xét học lực cho Sinh Viên.
+   - Nhập điểm rèn luyện cho sinh viên.
+   - Nhập điểm học phần cho Sinh Viên.
    - Tra cứu điểm học phần, điểm rèn luyện.
 
 3. **Dữ liệu**: 
-   - Dữ liệu cần được lưu trữ trong các file nhị phân.
+   - Dữ liệu cần được lưu trữ vào cơ sở dữ liệu.
    - Dữ liệu sẽ được quản lý trong các Collection như `ArrayList`, `LinkedList`, `Map`, v.v.
 
 4. **Tùy chọn nâng cao**:
@@ -89,12 +88,13 @@
 
 ### **Xử lý dữ liệu**
 
-- Dữ liệu sẽ được lưu trữ trong các file nhị phân.
+- Dữ liệu sẽ được lưu trữ trong cơ sở dữ liệu.
 - Khi làm việc với dữ liệu trong bộ nhớ, dữ liệu cần được lưu trữ trong các cấu trúc dữ liệu như `ArrayList`, `LinkedList`, hoặc `Map`.
 
 **Các lớp liên quan:**
 - **GiaoDienNguoiDung**: Lớp đại diện cho người dùng có thể quay trở lại màn hình chính sau khi đã hoàn tất một thao táo nào đó.
 - **HocPhan**: Lớp đại diện cho một học phần với các thuộc tính như Mã học phần, Tên học phần, và Số tín chỉ.
+- **HocKy**: Lớp đại diện cho thông tin học kỳ.
 
 ---
 
