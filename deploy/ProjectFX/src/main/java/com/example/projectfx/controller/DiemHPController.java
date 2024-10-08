@@ -227,8 +227,8 @@ public class DiemHPController {
         // Khai báo các biến hệ số
         double heSoCC1 = 0;
         double heSoCC2 = 0;
-        double heSoBaiTap = 0; // Khai báo ở đây
-        double heSoThucHanh = 0; // Khai báo ở đây
+        double heSoBaiTap = 0;
+        double heSoThucHanh = 0;
         double heSoGiuaKy = 0;
         double heSoCuoiKy = 0;
 
@@ -285,27 +285,27 @@ public class DiemHPController {
 
         // Kiểm tra giá trị điểm
         if (cc1Value < 0 || cc1Value > 10) {
-            showAlertERROR("Điểm 'CC1' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            showAlertERROR("Điểm 'CC1' phải ≥ 0 và ≤ 10.");
             return;
         }
         if (cc2Value < 0 || cc2Value > 10) {
-            showAlertERROR("Điểm 'CC2' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            showAlertERROR("Điểm 'CC2' phải ≥ 0 và ≤ 10.");
             return;
         }
         if (baiTapValue < 0 || baiTapValue > 10) {
-            showAlertERROR("Điểm 'Bài tập' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            showAlertERROR("Điểm 'Bài tập' phải ≥ 0 và ≤ 10.");
             return;
         }
         if (thucHanhValue < 0 || thucHanhValue > 10) {
-            showAlertERROR("Điểm 'Thực hành' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            showAlertERROR("Điểm 'Thực hành' phải ≥ 0 và ≤ 10.");
             return;
         }
         if (giuaKyValue < 0 || giuaKyValue > 10) {
-            showAlertERROR("Điểm 'Giữa kỳ' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            showAlertERROR("Điểm 'Giữa kỳ' phải ≥ 0 và ≤ 10.");
             return;
         }
         if (cuoiKyValue < 0 || cuoiKyValue > 10) {
-            showAlertERROR("Điểm 'Cuối kỳ' phải lớn hơn hoặc bằng 0 và nhỏ hơn 10.");
+            showAlertERROR("Điểm 'Cuối kỳ' phải ≥ 0 và ≤ 10.");
             return;
         }
 

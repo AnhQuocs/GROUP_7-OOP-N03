@@ -107,7 +107,7 @@ public class DSLichHocController {
                 String phongHoc = resultSet.getString("phongHoc");
                 Integer soLuongSinhVien = resultSet.getInt("soLuongSinhVien");
 
-                // Tạo đối tượng sinh viên và thêm vào danh sách
+                // Tạo đối tượng lịch học và thêm vào danh sách
                 LichHoc lichHoc = new LichHoc(hocKy, monHoc,ngayHoc, caHoc, phongHoc, soLuongSinhVien);
                 data.add(lichHoc);
             }
@@ -142,18 +142,15 @@ public class DSLichHocController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fxml/LichHoc.fxml"));
             Parent root = loader.load();
 
-            // Lấy controller của NhapThongTin
+            // Lấy controller của LichHoc
             LichHocController controller = loader.getController();
-            controller.hienThiThongTinLichHoc(lichHoc);  // Gửi thông tin sinh viên
+            controller.hienThiThongTinLichHoc(lichHoc);  // Gửi thông tin
 
-            // Chuyển sang scene NhapThongTin
+            // Chuyển sang scene LichHoc
             Stage stage = (Stage) tableView.getScene().getWindow();
             Scene scene = new Scene(root);
 
             stage.setTitle("Sửa Lịch Học");
-
-            // Áp dụng CSS nếu cần
-            scene.getStylesheets().add(getClass().getResource("/com/example/css/style.css").toExternalForm());
 
             stage.setScene(scene);
             stage.show();

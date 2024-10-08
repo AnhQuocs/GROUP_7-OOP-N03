@@ -112,7 +112,7 @@ public class DSLichThiController {
                 String kyThi = resultSet.getString("kyThi");
                 String hinhThuc = resultSet.getString("hinhThuc");
 
-                // Tạo đối tượng sinh viên và thêm vào danh sách
+                // Tạo đối tượng lịch thi và thêm vào danh sách
                 LichThi lichThi = new LichThi(hocKy, monThi, ngayThi, caThi, phongThi, thoiGianThi, kyThi, hinhThuc);
                 data.add(lichThi);
             }

@@ -35,7 +35,7 @@ public class DiemHocPhan {
         this.diemHe4 = new SimpleFloatProperty(diemHe4);
     }
 
-    // Getter và Setter
+    // Getter and Setter
     public String getHoVaDem() { return hoVaDem.get(); }
     public void setHoVaDem(String value) { hoVaDem.set(value); }
 

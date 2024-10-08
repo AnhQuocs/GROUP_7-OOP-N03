@@ -259,7 +259,7 @@ public class LichHocController {
             String query = "DELETE FROM lichHoc WHERE monHoc = ? AND hocKy = ?";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, monHoc);
-            stmt.setString(2, hocKy);  // Thêm giá trị học kỳ vào lệnh xóa
+            stmt.setString(2, hocKy);
 
             int rowsDeleted = stmt.executeUpdate();
             if (rowsDeleted > 0) {

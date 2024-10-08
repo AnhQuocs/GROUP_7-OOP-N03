@@ -141,7 +141,7 @@ public class DiemRLController {
 
         // Lưu hoặc cập nhật điểm vào cơ sở dữ liệu
         try (Connection connection = DataBaseConnection.getConnection()) {
-            // Kiểm tra xem bản ghi có tồn tại trong bảng diemHP hay không (dựa trên mã sinh viên và môn học)
+            // Kiểm tra xem bản ghi có tồn tại trong bảng diemRL hay không
             String checkQuery = "SELECT * FROM diemRL WHERE ma_sinh_vien = ?";
             PreparedStatement checkStmt = connection.prepareStatement(checkQuery);
             checkStmt.setString(1, maSV);

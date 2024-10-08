@@ -191,7 +191,7 @@ public class LichThiController {
             ResultSet resultSet = checkStmt.executeQuery();
 
             if (resultSet.next()) {
-                // Nếu lịch thi đã tồn tại, xóa lịch học cũ
+                // Nếu lịch thi đã tồn tại, xóa lịch thi cũ
                 String deleteQuery = "DELETE FROM lichThi WHERE monThi = ? AND hocKy = ?";
                 PreparedStatement deleteStmt = connection.prepareStatement(deleteQuery);
                 deleteStmt.setString(1, monThi);
