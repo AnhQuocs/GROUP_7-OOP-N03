@@ -147,7 +147,7 @@
 
 
 ## GitHub Pages Dự Án
-[Truy cập dự án tại đây](https://github.com/Nguyen1976/JAVA_OOP_PKA_Nhom_10)
+[Truy cập dự án tại đây](https://github.com/AnhQuocs/GROUP_7-OOP-N03)
 
 ## Cách Cài Đặt
 Clone repository từ GitHub:
