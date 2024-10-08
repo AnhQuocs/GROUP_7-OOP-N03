@@ -140,7 +140,7 @@
 - Đối tượng LichThi: hocKy, monThi, ngayThi, caThi, phongThi, thoiGianThi, kyThi, hinhThuc.
 
 - **Save Infomation**:
-<img src="img/saveinformation.png">
+<img src="img/saveinforstudent.png">
 
 - **Database**:
-<img src="img/databse.png">
+<img src="img/database.png">
