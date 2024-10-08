@@ -97,6 +97,11 @@
                   <Font size="14.0" />
                </font>
             </Button>
+            <Label style="-fx-font-style: italic;" text="(Chỉ có thể nhập điểm cho sinh viên đã tồn tại trong danh sách sinh viên)" GridPane.columnIndex="3" GridPane.columnSpan="2">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Label>
          </children>
       </GridPane>
       <HBox layoutX="-2.0" layoutY="361.0" prefHeight="241.0" prefWidth="1110.0">

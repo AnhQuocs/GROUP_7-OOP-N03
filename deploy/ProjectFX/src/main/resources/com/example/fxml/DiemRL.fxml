@@ -63,12 +63,12 @@
                </GridPane.margin>
             </Label>
             <TextField fx:id="maSinhVienField" prefHeight="26.0" prefWidth="110.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button fx:id="searchButton" onAction="#onSearch" mnemonicParsing="false" prefHeight="30.0" prefWidth="83.0" text="Đồng ý" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#onSearch" prefHeight="30.0" prefWidth="83.0" text="Đồng ý" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="quayLaiButton" onAction="#onQuayLai" mnemonicParsing="false" text="&lt; Quay lại" GridPane.valignment="TOP">
+            <Button fx:id="quayLaiButton" mnemonicParsing="false" onAction="#onQuayLai" text="&lt; Quay lại" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets left="10.0" top="10.0" />
                </GridPane.margin>
@@ -76,7 +76,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="traCuuButton" onAction="#onTraCuu" mnemonicParsing="false" text="Tra cứu điểm &gt;" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+            <Button fx:id="traCuuButton" mnemonicParsing="false" onAction="#onTraCuu" text="Tra cứu điểm &gt;" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                <font>
                   <Font size="14.0" />
                </font>
@@ -84,6 +84,11 @@
                   <Insets right="10.0" top="10.0" />
                </GridPane.margin>
             </Button>
+            <Label style="-fx-font-style: italic;" text="(Chỉ có thể nhập điểm cho sinh viên đã tồn tại trong danh sách sinh viên)" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets top="50.0" />
+               </GridPane.margin>
+            </Label>
          </children>
       </GridPane>
       <HBox layoutX="-2.0" layoutY="324.0" prefHeight="159.0" prefWidth="1110.0">
@@ -109,7 +114,7 @@
                      </GridPane.margin>
                   </Label>
                   <TextField fx:id="nhapDiemRLField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="278.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
-                  <Button fx:id="luuDiemRLButton" onAction="#onLuuDiem" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="66.0" text="Lưu" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                  <Button fx:id="luuDiemRLButton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onLuuDiem" prefHeight="28.0" prefWidth="66.0" text="Lưu" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                      <font>
                         <Font size="15.0" />
                      </font>
