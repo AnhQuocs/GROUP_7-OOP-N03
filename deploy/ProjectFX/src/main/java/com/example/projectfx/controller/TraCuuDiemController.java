@@ -130,7 +130,7 @@ public class TraCuuDiemController {
             if (hasData) {
                 diemTableView.setItems(diemList);
             } else {
-                showAlert("Mã sinh viên không tồn tại!");
+                showAlert("Mã sinh viên không tồn tại hoặc chưa được nhập điểm!");
             }
         } catch (SQLException e) {
             e.printStackTrace();
