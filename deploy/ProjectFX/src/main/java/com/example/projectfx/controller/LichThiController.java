@@ -1,5 +1,18 @@
 package com.example.projectfx.controller;
 
+import com.example.projectfx.database.DataBaseConnection;
+import com.example.projectfx.database.SinhVienDAO;
+import com.example.projectfx.model.LichHoc;
+import com.example.projectfx.model.LichThi;
+import com.example.projectfx.model.SinhVien;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,22 +22,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.List;
-
-import com.example.projectfx.database.DataBaseConnection;
-import com.example.projectfx.database.SinhVienDAO;
-import com.example.projectfx.model.LichThi;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.SplitMenuButton;
-import javafx.stage.Stage;
 
 public class LichThiController {
     @FXML
@@ -290,4 +287,3 @@ public class LichThiController {
         alert.showAndWait();
     }
 }
-
