@@ -139,6 +139,18 @@ public class DiemRLController {
             return;
         }
 
+        try {
+            double diemRL = Double.parseDouble(diemRenLuyen); // Chuyển từ chuỗi sang số
+
+            if (diemRL < 0 || diemRL > 100) { // So sánh với số
+                showAlertERROR("Điểm rèn luyện phải ≥ 0 và ≤ 100.");
+                return;
+            }
+        } catch (NumberFormatException e) {
+            showAlertERROR("Điểm rèn luyện phải là một số hợp lệ.");
+            return;
+        }
+
         // Lưu hoặc cập nhật điểm vào cơ sở dữ liệu
         try (Connection connection = DataBaseConnection.getConnection()) {
             // Kiểm tra xem bản ghi có tồn tại trong bảng diemRL hay không
