@@ -9,17 +9,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DanhSachController {
     @FXML
@@ -69,6 +64,8 @@ public class DanhSachController {
     @FXML
     private Button quayLaiDS;
 
+    @FXML
+    private TextField timKiemField;
 
     private SinhVien selectedSinhVien;
 
@@ -174,7 +171,7 @@ public class DanhSachController {
             Parent root = loader.load();
 
             // Lấy controller của NhapThongTin
-            InforController controller = loader.getController();
+            ThongTinController controller = loader.getController();
             controller.hienThiThongTinSinhVien(sinhVien);  // Gửi thông tin sinh viên
 
             // Chuyển sang scene NhapThongTin
@@ -220,4 +217,61 @@ public class DanhSachController {
         }
     }
 
+    @FXML
+    public void onSearch(ActionEvent event) {
+        String maSV = timKiemField.getText().trim();  // Lấy mã sinh viên từ timKiemField
+
+        // Xóa dữ liệu cũ trong TableView
+        data.clear();
+
+        if (maSV.isEmpty()) {
+            // Nếu mã sinh viên trống, hiển thị tất cả sinh viên
+            loadData();
+            return;
+        }
+
+        // Truy vấn sinh viên theo mã
+        try (Connection connection = DataBaseConnection.getConnection()) {
+            String query = "SELECT * FROM sinhvien WHERE ma_sinh_vien = ?";
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, maSV);
+
+            ResultSet resultSet = stmt.executeQuery();
+
+            if (resultSet.next()) {
+                // Lấy thông tin sinh viên từ cơ sở dữ liệu
+                String hoVaDem = resultSet.getString("ho_va_dem");
+                String ten = resultSet.getString("ten");
+                String maSinhVien = resultSet.getString("ma_sinh_vien");
+                String gTinh = resultSet.getString("gtinh");
+                String nganhHoc = resultSet.getString("nganh_hoc");
+                String khoaDT = resultSet.getString("khoa_dao_tao");
+                String lopHoc = resultSet.getString("lop_hoc");
+                String soDienThoai = resultSet.getString("so_dien_thoai");
+                String dateSinh = resultSet.getString("date_sinh");
+                String noiSinh = resultSet.getString("noi_sinh");
+                String email = resultSet.getString("email");
+
+                // Tạo đối tượng sinh viên và thêm vào danh sách
+                SinhVien sinhVien = new SinhVien(hoVaDem, ten, maSinhVien, gTinh, dateSinh, noiSinh, email, soDienThoai, khoaDT, nganhHoc, lopHoc);
+                data.add(sinhVien);
+            } else {
+                // Nếu không tìm thấy sinh viên, hiển thị thông báo lỗi
+                showAlertERROR("Mã sinh viên " + maSV + " không tồn tại.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            showAlertERROR("Đã xảy ra lỗi khi kiểm tra mã sinh viên!");
+        }
+    }
+
+
+
+    private void showAlertERROR(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Lỗi");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
 }
