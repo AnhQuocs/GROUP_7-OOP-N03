@@ -171,18 +171,18 @@ public class LichHocController {
         // Lưu vào cơ sở dữ liệu
         try (Connection connection = DataBaseConnection.getConnection()) {
             // Kiểm tra xem lịch học đã tồn tại chưa
-            String checkQuery = "SELECT * FROM lichHoc WHERE monHoc = ? AND hocKy = ?";
+            String checkQuery = "SELECT * FROM lichHoc WHERE monHoc = ? AND ngayHoc = ?";
             PreparedStatement checkStmt = connection.prepareStatement(checkQuery);
             checkStmt.setString(1, monHoc);
-            checkStmt.setString(2, hocKy);  // Thêm dòng này để kiểm tra học kỳ
+            checkStmt.setString(2, ngayHoc);  // Thêm dòng này để kiểm tra học kỳ
             ResultSet resultSet = checkStmt.executeQuery();
 
             if (resultSet.next()) {
                 // Nếu lịch học đã tồn tại, xóa lịch học cũ
-                String deleteQuery = "DELETE FROM lichHoc WHERE monHoc = ? AND hocKy = ?";
+                String deleteQuery = "DELETE FROM lichHoc WHERE monHoc = ? AND ngayHoc = ?";
                 PreparedStatement deleteStmt = connection.prepareStatement(deleteQuery);
                 deleteStmt.setString(1, monHoc);
-                deleteStmt.setString(2, hocKy);  // Thêm học kỳ vào lệnh DELETE
+                deleteStmt.setString(2, ngayHoc);  // Thêm học kỳ vào lệnh DELETE
                 deleteStmt.executeUpdate();
             }
 
