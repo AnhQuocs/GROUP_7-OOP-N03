@@ -198,9 +198,9 @@
                   <SplitMenuButton fx:id="hinhThucSplit" mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <items>
                         <MenuItem mnemonicParsing="false" text="Trắc nghiệm trên giấy" />
+                        <MenuItem mnemonicParsing="false" text="Tự luận trên giấy" />
                         <MenuItem mnemonicParsing="false" text="Trắc nghiệm trên máy tính" />
                         <MenuItem mnemonicParsing="false" text="Thực hành trên máy tính" />
-                        <MenuItem mnemonicParsing="false" text="Tự luân trên giấy" />
                      </items>
                   </SplitMenuButton>
                </children>

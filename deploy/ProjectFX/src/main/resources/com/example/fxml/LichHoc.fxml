@@ -122,6 +122,7 @@
                     <items>
                         <MenuItem mnemonicParsing="false" text="Lập trình hướng đối tượng" />
                         <MenuItem mnemonicParsing="false" text="Cơ sở dữ liệu" />
+                        <MenuItem mnemonicParsing="false" text="Cơ sở dữ liệu(Thực hành)" />
                         <MenuItem mnemonicParsing="false" text="Xây dựng ứng dụng web" />
                         <MenuItem mnemonicParsing="false" text="Cấu trúc dữ liệu và thuật toán" />
                         <MenuItem mnemonicParsing="false" text="Tư tưởng Hồ Chí Minh" />

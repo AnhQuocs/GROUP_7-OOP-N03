@@ -63,7 +63,7 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <SplitMenuButton fx:id="chonMonHoc" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="187.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <SplitMenuButton fx:id="chonMonHoc" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="220.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1">
                <items>
                   <MenuItem mnemonicParsing="false" text="Lập trình hướng đối tượng" />
                   <MenuItem mnemonicParsing="false" text="Cơ sở dữ liệu" />
@@ -83,13 +83,13 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="maSinhVien" prefHeight="26.0" prefWidth="110.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="maSinhVien" prefHeight="26.0" prefWidth="220.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
             <Button fx:id="search" mnemonicParsing="false" onAction="#onSearch" prefHeight="30.0" prefWidth="83.0" text="Đồng ý" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="quayLai" onAction="#onQuayLai" mnemonicParsing="false" text="&lt; Quay lại" GridPane.valignment="TOP">
+            <Button fx:id="quayLai" mnemonicParsing="false" onAction="#onQuayLai" text="&lt; Quay lại" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets left="10.0" top="10.0" />
                </GridPane.margin>
