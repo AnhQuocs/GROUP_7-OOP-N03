@@ -1,7 +1,6 @@
 package com.example.projectfx.controller;
 
 import com.example.projectfx.database.DataBaseConnection;
-import com.example.projectfx.model.DiemHocPhan;
 import com.example.projectfx.model.DiemRenLuyen;
 import com.example.projectfx.model.SinhVien;
 import com.example.projectfx.database.SinhVienDAO;
