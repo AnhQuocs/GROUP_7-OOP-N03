@@ -1,7 +1,6 @@
 package com.example.projectfx.controller;
 
 import com.example.projectfx.database.DataBaseConnection;
-import com.example.projectfx.model.DiemHocPhan;
 import com.example.projectfx.model.DiemRenLuyen;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
