@@ -199,6 +199,18 @@ public class DiemHPController {
         String cuoiKy = cuoiKyField.getText();
 
         // Kiểm tra các trường nhập liệu
+        if (maSV.isEmpty()) {
+            showAlertERROR("Vui lòng nhập mã sinh viên.");
+            return;
+        }
+        if (hocKy.isEmpty()) {
+            showAlertERROR("Vui lòng chọn học kỳ.");
+            return;
+        }
+        if (monHoc.isEmpty()) {
+            showAlertERROR("Vui lòng chọn môn học.");
+            return;
+        }
         if (cc1.isEmpty()) {
             showAlertERROR("Trường 'CC1' không được để trống.");
             return;
@@ -263,7 +275,7 @@ public class DiemHPController {
         double tongHeSo = heSoCC1 + heSoCC2 + heSoBaiTap + heSoThucHanh + heSoGiuaKy + heSoCuoiKy;
 
         if (tongHeSo != 100) {
-            showAlertERROR("Hệ số các điểm phải bằng 100%.");
+            showAlertERROR("Tổng hệ số các điểm phải bằng 100%.");
             return; // Ngừng thực hiện nếu tổng hệ số không đúng
         }
 
@@ -446,6 +458,20 @@ public class DiemHPController {
     @FXML
     public void onSearch(ActionEvent event) {
         String maSV = maSinhVien.getText().trim();
+        String monHoc = chonMonHoc.getText();
+        String hocKy = chonHocKy.getText();
+        if (maSV.isEmpty()) {
+            showAlertERROR("Vui lòng nhập mã sinh viên.");
+            return;
+        }
+        if (hocKy.isEmpty()) {
+            showAlertERROR("Vui lòng chọn học kỳ.");
+            return;
+        }
+        if (monHoc.isEmpty()) {
+            showAlertERROR("Vui lòng chọn môn học.");
+            return;
+        }
 
         // Kiểm tra mã sinh viên trong cơ sở dữ liệu
         try (Connection connection = DataBaseConnection.getConnection()) {
