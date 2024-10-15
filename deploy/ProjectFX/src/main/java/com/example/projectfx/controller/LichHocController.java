@@ -3,7 +3,6 @@ package com.example.projectfx.controller;
 import com.example.projectfx.database.DataBaseConnection;
 import com.example.projectfx.database.SinhVienDAO;
 import com.example.projectfx.model.LichHoc;
-import com.example.projectfx.model.SinhVien;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -214,6 +213,7 @@ public class LichHocController {
         phongHocSplit.setText("");
     }
 
+
     @FXML
     public void onXoaLichHoc(ActionEvent event) {
         String monHoc = monHocSplit.getText();
@@ -222,13 +222,13 @@ public class LichHocController {
             return;
         }
 
-        String hocKy = hocKySplit.getText();
-        if (hocKy.isEmpty()) {
-            showAlert("Vui lòng chọn học kỳ để xóa.");
+        String caHoc = caHocSplit.getText();
+        if (caHoc.isEmpty()) {
+            showAlert("Vui lòng chọn ca học để xóa.");
             return;
         }
 
-        deleteLichHoc(monHoc, hocKy);
+        deleteLichHoc(monHoc, caHoc);
 
         hocKySplit.setText("");
         monHocSplit.setText("");
@@ -254,12 +254,12 @@ public class LichHocController {
         alert.showAndWait();
     }
 
-    private void deleteLichHoc(String monHoc, String hocKy) {
+    private void deleteLichHoc(String monHoc, String caHoc) {
         try (Connection connection = DataBaseConnection.getConnection()) {
-            String query = "DELETE FROM lichHoc WHERE monHoc = ? AND hocKy = ?";
+            String query = "DELETE FROM lichHoc WHERE monHoc = ? AND caHoc = ?";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, monHoc);
-            stmt.setString(2, hocKy);
+            stmt.setString(2, caHoc);
 
             int rowsDeleted = stmt.executeUpdate();
             if (rowsDeleted > 0) {
