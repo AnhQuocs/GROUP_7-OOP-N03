@@ -2,9 +2,7 @@ package com.example.projectfx.controller;
 
 import com.example.projectfx.database.DataBaseConnection;
 import com.example.projectfx.database.SinhVienDAO;
-import com.example.projectfx.model.LichHoc;
 import com.example.projectfx.model.LichThi;
-import com.example.projectfx.model.SinhVien;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -220,6 +218,15 @@ public class LichThiController {
             e.printStackTrace();
             showAlert("Đã xảy ra lỗi khi lưu thông tin vào cơ sở dữ liệu.");
         }
+
+        caThiSplit.setText("");
+        phongThiSplit.setText("");
+        thoiGianThiSplit.setText("");
+        kyThiSplit.setText("");
+        hinhThucSplit.setText("");
+        monThiSplit.setText("");
+        hocKySplit.setText("");
+        ngayThiPicker.setValue(null);
     }
 
     @FXML
