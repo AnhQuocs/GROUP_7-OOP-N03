@@ -2,7 +2,6 @@ package com.example.projectfx.controller;
 
 import com.example.projectfx.database.DataBaseConnection;
 import com.example.projectfx.model.LichHoc;
-import com.example.projectfx.model.SinhVien;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
