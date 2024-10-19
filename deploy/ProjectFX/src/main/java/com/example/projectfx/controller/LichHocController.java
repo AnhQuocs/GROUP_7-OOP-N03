@@ -159,6 +159,12 @@ public class LichHocController {
         String caHoc = caHocSplit.getText();
         String phongHoc = phongHocSplit.getText();
         Integer soLuongSinhVien = null;
+
+        if (soLuongSinhVienTextField.getText().isEmpty()) {
+            showAlert("Vui lòng nhập số lượng sinh viên.");
+            return;  // Thoát phương thức nếu chưa nhập
+        }
+
         try {
             soLuongSinhVien = Integer.parseInt(soLuongSinhVienTextField.getText());
         } catch (NumberFormatException e) {
