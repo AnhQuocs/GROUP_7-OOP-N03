@@ -171,6 +171,13 @@ public class ThongTinController {
             showAlert("Trường 'Email' không được để trống.");
             return;
         }
+
+        // Kiểm tra email có đuôi "@st.phenikaa-uni.edu.vn"
+        if (!email.endsWith("@st.phenikaa-uni.edu.vn")) {
+            showAlert("Email phải có đuôi '@st.phenikaa-uni.edu.vn'.");
+            return;
+        }
+
         if (soDienThoai.isEmpty()) {
             showAlert("Trường 'Số điện thoại' không được để trống.");
             return;
