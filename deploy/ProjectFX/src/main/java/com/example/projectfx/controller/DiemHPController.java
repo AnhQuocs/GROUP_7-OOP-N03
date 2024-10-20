@@ -236,6 +236,25 @@ public class DiemHPController {
             thucHanh = "0";
         }
 
+        // Kiểm tra các trường hệ số không được để trống
+        if (heSoCC1Split.getText().isEmpty()) {
+            showAlertERROR("Hệ số CC1 không được để trống.");
+            return;
+        }
+        if (heSoCC2Split.getText().isEmpty()) {
+            showAlertERROR("Hệ số CC2 không được để trống.");
+            return;
+        }
+
+        if (heSoGiuaKySplit.getText().isEmpty()) {
+            showAlertERROR("Hệ số Giữa kỳ không được để trống.");
+            return;
+        }
+        if (heSoCuoiKySplit.getText().isEmpty()) {
+            showAlertERROR("Hệ số Cuối kỳ không được để trống.");
+            return;
+        }
+
         // Khai báo các biến hệ số
         double heSoCC1 = 0;
         double heSoCC2 = 0;
@@ -320,6 +339,8 @@ public class DiemHPController {
             showAlertERROR("Điểm 'Cuối kỳ' phải ≥ 0 và ≤ 10.");
             return;
         }
+
+
 
         // Lưu hoặc cập nhật điểm vào cơ sở dữ liệu
         try (Connection connection = DataBaseConnection.getConnection()) {
@@ -445,7 +466,7 @@ public class DiemHPController {
     private void showAlertINFOR(String message) {
         try {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Lỗi");
+            alert.setTitle("Thông báo");
             alert.setHeaderText(null);
             alert.setContentText(message);
             alert.showAndWait();
