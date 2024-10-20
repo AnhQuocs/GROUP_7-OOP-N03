@@ -143,7 +143,7 @@
 <img src="img/saveinforstudent.png">
 
 - **Database**:
-<img src="img/database.png">
+<img src="img/database.jpg">
 
 
 ## GitHub Pages Dự Án
