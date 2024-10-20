@@ -104,7 +104,7 @@ public class TraCuuDRLController {
             if (hasData) {
                 tableView.setItems(diemList);
             } else {
-                showAlert("Mã sinh viên không tồn tại!");
+                showAlert("Mã sinh viên không tồn tại hoặc chưa được nhập điểm!");
             }
         } catch (SQLException e) {
             e.printStackTrace();
