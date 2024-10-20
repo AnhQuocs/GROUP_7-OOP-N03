@@ -317,7 +317,7 @@ public class DiemRLController {
 
     private void showAlertINFOR(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Lỗi");
+        alert.setTitle("Thông báo");
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
