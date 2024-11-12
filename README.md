@@ -20,6 +20,8 @@
 
 ### **Giới thiệu**
 Đây là một dự án xây dựng một ứng dụng quản lý sinh viên bằng ngôn ngữ Java với giao diện JavaFX. Ứng dụng sẽ hỗ trợ các chức năng cơ bản như cập nhật thông tin sinh viên, lịch học/lịch thi, điểm học phần, điểm rèn luyện, tra cứu điểm điểm học phần/điểm rèn luyện và lưu trữ dữ liệu vào cơ sở dữ liệu.
+
+![Demo ứng dụng](https://www.youtube.com/watch?v=UyS-zKrwUZQ)
 ---
 
 ### **Thành viên nhóm**
