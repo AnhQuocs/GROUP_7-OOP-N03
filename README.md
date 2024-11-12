@@ -16,19 +16,21 @@
 8. [Hướng dẫn cài đặt và chạy chương trình](#hướng-dẫn-cài-đặt-và-chạy-chương-trình)
 9. [Màn hình ứng dụng](#màn-hình-ứng-dụng)
 
----
+
 
 ### **Giới thiệu**
 Đây là một dự án xây dựng một ứng dụng quản lý sinh viên bằng ngôn ngữ Java với giao diện JavaFX. Ứng dụng sẽ hỗ trợ các chức năng cơ bản như cập nhật thông tin sinh viên, lịch học/lịch thi, điểm học phần, điểm rèn luyện, tra cứu điểm điểm học phần/điểm rèn luyện và lưu trữ dữ liệu vào cơ sở dữ liệu.
 
-![Demo ứng dụng](https://www.youtube.com/watch?v=UyS-zKrwUZQ)
----
+
+[Demo ứng dụng](https://www.youtube.com/watch?v=UyS-zKrwUZQ)
+
+
 
 ### **Thành viên nhóm**
    - **Bùi Anh Quốc**: Phát triển ứng dụng toàn diện.
    - **Trần Anh Tú**: Đóng góp, kiểm thử ứng dụng.
 
----
+
 
 ### **Mục tiêu cần đạt của dự án**
 
